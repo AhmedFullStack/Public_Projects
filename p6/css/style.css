@@ -1,0 +1,98 @@
+:root{
+    --Acolor:#FF7008;
+    --Bcolor:#FF852C;
+    --Ccolor:#FFC297;
+    --Dcolor:#1C1C1C;
+    --Ecolor:#858585;
+    --Fcolor:#ffffff;
+}
+::placeholder{
+    color:var(--Fcolor);
+    opacity:1;
+ 
+}
+body{padding:0;margin:0;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+.container-flouid{width:100% auto;}
+.container{width:90% auto;}
+
+a{text-decoration: none;}
+a:hover{color:var(--Bcolor);}
+
+button{text-decoration: none;}
+button:hover{color:var(--Bcolor);}
+
+.Acolor{color:var(--Acolor);}
+.Bcolor{color:var(--Bcolor);}
+.Ccolor{color:var(--Ccolor);}
+.Dcolor{color:var(--Dcolor);}
+.Ecolor{color:var(--Ecolor);}
+.Fcolor{color:var(--Fcolor);}
+
+.bg-Acolor{background-color:var(--Acolor);}
+.bg-Bcolor{background-color:var(--Bcolor);}
+.bg-Ccolor{background-color:var(--Ccolor);}
+.bg-Dcolor{background-color:var(--Dcolor);}
+.bg-Ecolor{background-color:var(--Ecolor);}
+.bg-Fcolor{background-color:var(--Fcolor);}
+.vl-top{vertical-align:top;}
+.d-inline-block{display:inline-block;}
+.text-center{text-align:center;}
+.ul-none{list-style:none;padding:0;margin:0 auto;}
+
+/* ============border=========== */
+.b{border:1px solid var(--Ecolor);}
+
+
+.w-10{width:9%;}
+.w-20{width:20%;}
+.w-30{width:30%;}
+.w-40{width:40%;}
+.w-50{width:49%;}
+.w-75{width:74%;}
+.w-100{width:98%;}
+
+.h-100{height:100vh}
+
+.p-rt-3{padding:0 3% }
+
+.p-tb-2{padding:2% 0;}
+.p-tb-7{padding:7% 0;}
+
+
+/* ===============margin============= */
+.m-tm-3{margin:3% 0;}
+.m-tm-2{margin:2% 0;}
+.m-rl-3{margin:0 3%;}
+
+/* ===========border========== */
+.b-left{border-left:1px solid var(--Ecolor);}
+#listicon img{
+    aspect-ratio: 1/1;
+    width:50%;
+
+}
+#signinTable h6{
+ margin:0;
+
+}
+#signinTable label{
+    color:var(--Dcolor);
+    font-size: 6px;
+    border:0;
+    border-bottom:1px solid var(--Bcolor);
+}
+#signinTable input{
+
+    font-size: small;
+}
+#signinTable input:label{}
+#signinTable input::marker{
+color:var(--Bcolor);
+ 
+}
+#signinimg{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: url(../imgs/unsplash_C8Ta0gwPbQg.png);
+    width: 20%;
+}
