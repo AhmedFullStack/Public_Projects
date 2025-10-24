@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+h1,h2,h3,h4,p{
+    text-decoration:none;
+
+}
+.container{
+    width:90%;
+    margin:0 auto;
+    background:#013103;
+}
+.card{
+    background-color:blueviolet;
+    border-radius: 10px;
+    aspect-ratio:2/1;
+    margin:10px;
+    width: 100%;
+    display: inline-block;
+}
+.card-img {
+    width: 30%;
+   
+  background:#fff;
+  border-radius 50%;
+  vertical-align: 1/1;
+}
+.card-img img{
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #f70;
+    aspect-ratio: 1/1;
+}
+.data-card{
+    display: inline-block;
+    background: #fff;;
+    color:#2e2e2e;
+    width: 75%;
+  
+}

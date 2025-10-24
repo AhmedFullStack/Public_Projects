@@ -1,0 +1,72 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+}
+:root{
+    /* --Acolor: #3A9F72;
+    --Bcolor:#68D66F;
+    --Ccolor:#F5F7F6;
+    --Dcolor:#171F2D;  */
+
+    /* --Acolor: #68D66F;
+    --Bcolor:#3A9F72;
+    --Ccolor:#F5F7F6;
+    --Dcolor:#171F2D; */
+
+    --Acolor: #092D09;
+    --Bcolor:#3A9F72;
+    --Ccolor:#F5F7F6;
+    --Dcolor:#171F2D; */
+
+    
+    ::selection { background: var(--Ccolor); color: var(--Bcolor); }
+}
+.button {
+    /* transition-property: لتحديد الخاصية التي سيتم تطبيق الانتقال عليها */
+    transition-property: background-color;
+    transition-property:color;
+    transition-property:border;
+
+  
+    /* transition-duration: مدة الانتقال */
+    transition-duration: 0.3s;
+  
+    /* transition-timing-function: لتحديد سرعة الانتقال خلال مدته */
+    /* ease, linear, ease-in, ease-out, ease-in-out */
+    transition-timing-function: ease-in-out;
+  
+    /* transition-delay: تأخير بدء الانتقال */
+    transition-delay: 0.1s;
+  
+    /* transition: خاصية مختصرة لجميع خواص الانتقال */
+    transition: all 0.3s ease-in 0.1s;
+    padding:3px;
+    border-radius:20px;
+    color:var(--Ccolor);
+    border:1px solid var(--Ccolor);
+    background: var(--Bcolor);
+    box-sizing: border-box;
+    margin: 3px 20px;
+    
+  }
+  
+  .button:hover {
+    background-color: var(--Ccolor);
+    color: var(--Bcolor);
+    border: 1px solid var(--Acolor);
+    transform: scale(1.01);
+    
+  }
+  
+  @keyframes slide-in {
+    /* @keyframes: لتعريف حركة (animation) مخصصة */
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

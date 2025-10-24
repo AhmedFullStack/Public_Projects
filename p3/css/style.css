@@ -1,0 +1,93 @@
+
+*{ 
+    /* لتطبيق هذه الانماط علي كل العناصر  */
+
+    /* لجعل كل البوردر من الداخل  */
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+
+
+}
+a{
+    /* لازالة الخط تحت اللينكات  */
+    text-decoration: none;
+
+}
+body{
+
+    background:#f0f0f0;
+    height:3000px;
+    border:solid #f70 3px;
+
+
+}
+.table,.table tr,.table td,.table th{
+    border:2px solid #f70;
+    padding:1px;
+}
+.text-blue{
+    color:blue;
+}
+.Abackground{
+    background:#fff;
+    height:3rem;
+    text-align:center;}
+.divAspect{
+    aspect-ratio:1/1;
+    width:100px;
+}
+.container{
+    width:90%;
+    margin:0 auto;
+}
+.container-fluid{
+    width:100%;
+    margin:0 auto;
+}
+.service{
+    width: 30%;
+    background: #fff;
+    display: inline-block;
+    margin: 1% calc(9%/6);
+    padding: 14px;
+    border-radius: 1%;
+}
+.service img{
+    max-width:100%;
+   border-radius: 50% 0;
+    
+
+}
+.service p{
+    height:6rem;
+    line-height:1.5rem;
+    overflow: hidden;
+    letter-spacing:0.1rem;
+}
+.service .bkimg{
+    background-image:url('../imgs/2.png');
+    width: 100%;
+    background-size: cover;
+
+
+}
+.a-btn{
+    background-color: #f70;
+    padding: 2% 5%;
+    color: #fff;
+    display: block;
+    border-radius: 7px;
+    margin: 0 auto;
+    width: max-content;
+    border-collapse:collapse;
+    box-sizing: border-box;
+  
+    
+}
+.a-btn:hover{
+    background-color: #fff;
+    color: #f70;
+    border:0px solid #f70;
+
+}

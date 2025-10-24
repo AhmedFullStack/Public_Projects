@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:#f0f0f0;
+        }
+nav{
+    background:#fff;
+}
+nav ul{
+    background-color:#fff;
+}
+nav ul li{
+    float:right;
+    padding:5px;
+}
+nav ul li a{
+    text-decoration:none;
+}
+    </style>
+</head>
+<body>
+    
+    <table width="70%" align="center" border="1"> 
+        <tr>
+            <nav>
+                <ul ><tr>
+                    <td align="center"><li><a href="#">Home</a></li></td>
+                </tr></ul>
+             </nav>
+        </tr>
+    </table>
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+    <style>
+    #div1 {
+      width: 350px;
+      height: 70px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+    </style>
+    <script>
+    function dragstartHandler(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function dragoverHandler(ev) {
+      ev.preventDefault();
+    }
+    
+    function dropHandler(ev) {
+      ev.preventDefault();
+      const data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+    </head>
+    <body>
+    
+    <h1>Drag and Drop API</h1>
+    
+    <p>Drag the W3Schools image into the rectangle:</p>
+    
+    <div id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+    <br>
+    <img id="img1" src="img_logo.gif" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69">
+    
+    </body>
+    </html>
+
+</body>
+</html>

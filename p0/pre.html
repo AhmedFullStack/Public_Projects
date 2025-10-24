@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="uplouds/logo.webp" type="webp">
+    <title>cloudflard codes</title>
+</head>
+<body>
+    <b> # إنشاء نفق جديد</b>
+    <hr/>
+    <pre style="background-color: #3d3d3d; padding: 10px; border-radius: 5px; color: white; overflow-x: auto;">
+        # إنشاء نفق جديد
+cloudflared tunnel create <NAME>
+
+# إنشاء نفق مع تحديد ملف التكوين
+cloudflared tunnel create --config <CONFIG_FILE> <NAME>
+</pre>
+<hr/>
+    <b> # تشغيل النفق</b>
+    <hr/>
+    <pre style="background-color: #3d3d3d; padding: 10px; border-radius: 5px; color: white; overflow-x: auto;">
+        # تشغيل النفق باستخدام معرف النفق
+cloudflared tunnel run <TUNNEL_ID>
+# تشغيل النفق باستخدام اسم النفق
+cloudflared tunnel run <NAME>
+# تشغيل النفق مع تحديد ملف التكوين
+cloudflared tunnel run --config <CONFIG_FILE> <NAME>
+</pre>
+<hr/>
+    <b> # حذف النفق</b>
+    <hr/>
+    <pre style="background-color: #3d3d3d; padding: 10px; border-radius: 5px; color: white; overflow-x: auto;">
+        # حذف النفق باستخدام معرف النفق
+cloudflared tunnel delete <TUNNEL_ID>
+# حذف النفق باستخدام اسم النفق
+cloudflared tunnel delete <NAME>
+# حذف النفق مع تحديد ملف التكوين
+cloudflared tunnel delete --config <CONFIG_FILE> <NAME>
+</pre>
+<hr/>
+    <b> # قائمة الأنفاق</b>
+    <hr/>
+    <pre style="background-color: #3d3d3d; padding: 10px; border-radius: 5px; color: white; overflow-x: auto;">
+        # عرض قائمة الأنفاق
+cloudflared tunnel list
+# عرض قائمة الأنفاق مع تحديد ملف التكوين
+cloudflared tunnel list --config <CONFIG_FILE>
+
+</pre>
+<hr/>
+    <b> # تحديث النفق</b>
+    <hr/>
+    <pre style="background-color: #3d3d3d; padding: 10px; border-radius: 5px; color: white; overflow-x: auto;">
+        # تحديث النفق باستخدام معرف النفق
+cloudflared tunnel update <TUNNEL_ID>
+# تحديث النفق باستخدام اسم النفق
+cloudflared tunnel update <NAME>
+# تحديث النفق مع تحديد ملف التكوين
+cloudflared tunnel update --config <CONFIG_FILE> <NAME>
+</pre>
+<hr/>
+    <b> # إظهار معلومات النفق</b>
+    <hr/>
+    <pre style="background-color: #3d3d3d; padding: 10px; border-radius: 5px; color: white; overflow-x: auto;">
+        # إظهار معلومات النفق باستخدام معرف النفق
+cloudflared tunnel info <TUNNEL_ID>
+# إظهار معلومات النفق باستخدام اسم النفق
+cloudflared tunnel info <NAME>
+# إظهار معلومات النفق مع تحديد ملف التكوين
+cloudflared tunnel info --config <CONFIG_FILE> <NAME>
+</pre>
+<hr/>
+    <b> # ربط النفق بمضيف</b>
+    <hr/>
+    <pre style="background-color: #3d3d3d; padding: 10px; border-radius: 5px; color: white; overflow-x: auto;">
+        # ربط النفق بمضيف باستخدام معرف النفق
+cloudflared tunnel route dns <TUNNEL_ID> <HOSTNAME>
+# ربط النفق بمضيف باستخدام اسم النفق
+cloudflared tunnel route dns <NAME> <HOSTNAME>
+# ربط النفق بمضيف مع تحديد ملف التكوين
+cloudflared tunnel route dns --config <CONFIG_FILE> <NAME> <HOSTNAME>
+</pre>
+<hr/>
+<b> # إلغاء ربط النفق بمضيف</b>
+    <hr/>
+    <pre style="background-color: #3d3d3d; padding: 10px; border-radius: 5px; color: white; overflow-x: auto;">
+        # إلغاء ربط النفق بمضيف باستخدام معرف النفق
+cloudflared tunnel route dns delete <TUNNEL_ID> <HOSTNAME>
+# إلغاء ربط النفق بمضيف باستخدام اسم النفق
+cloudflared tunnel route dns delete <NAME> <HOSTNAME>
+# إلغاء ربط النفق بمضيف مع تحديد ملف التكوين
+cloudflared tunnel route dns delete --config <CONFIG_FILE> <NAME> <HOSTNAME>
+</pre>
+<hr/>
+<CONFIG_FILE>
+<b> # إنشاء نفق جديد</b>
+    <hr/>
+    <pre style="background-color: #3d3d3d; padding: 10px; border-radius: 5px; color: white; overflow-x: auto;">
+        # إنشاء نفق جديد
+cloudflared tunnel create <NAME>
+# إنشاء نفق مع تحديد ملف التكوين
+cloudflared tunnel create --config <CONFIG_FILE> <NAME>
+</pre>
+<hr/>
+    <b> # تشغيل النفق</b>
+    <hr/>
+    <pre style="background-color: #3d3d3d; padding: 10px; border-radius: 5px; color: white; overflow-x: auto;">
+        # تشغيل النفق باستخدام معرف النفق
+cloudflared tunnel run <TUNNEL_ID>
+# تشغيل النفق باستخدام اسم النفق
+cloudflared tunnel run <NAME>
+# تشغيل النفق مع تحديد ملف التكوين
+cloudflared tunnel run --config <CONFIG_FILE> <NAME>
+</pre>
+
+</NAME>
+</NAME>
+</NAME>
+</CONFIG_FILE>
+</HOSTNAME>
+</HOSTNAME>
+</HOSTNAME>
+</HOSTNAME>
+</NAME>
+</NAME>
+</NAME>
+</NAME>
+</CONFIG_FILE>
+</NAME>
+</NAME>
+</NAME>
+</NAME>
+</body>
+</html>

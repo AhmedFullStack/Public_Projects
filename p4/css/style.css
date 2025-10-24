@@ -1,0 +1,113 @@
+:root{
+    --Acolor:#2F2E2E;
+    --Bcolor:#254D4D33;
+    --Ccolor:#F4F6F5;
+    --Dcolor:#254D4D33;
+    --Ecolor:#f3f3f3;
+
+    --A-bg-color:var(--Acolor);
+    --B-bg-color:var(--Bcolor);
+    --C-bg-color:var(--Ccolor);
+    --D-bg-color:var(--Dcolor);
+}
+body{ margin:0;padding:0; box-sizing:border-box;font-family: 'Inter', sans-serif;}
+/* --------------------------------- */
+a{text-decoration:none;color:var(--Ccolor)}
+a:hover{border-right:0.5px solid var(--Ccolor);}
+ul{list-style-type:none;}
+/* --------------------------------- */
+.container{width:90%;margin:0 auto;overflow:hidden;}
+.container-flouid{width:100%;margin:0 auto;overflow:hidden;}
+/* ----------------Color----------------- */
+.Acolor{color:var(--Acolor);}
+.Bcolor{color:var(--Bcolor);}
+.Ccolor{color:var(--Ccolor);}
+.Dcolor{color:var(--Dcolor);}
+.Ecolor{color:var(--Ecolor);}
+/* ---------------background------------------ */
+.A-bg-color{background-color:var(--A-bg-color);}
+.B-bg-color{background-color:var(--B-bg-color);}
+.C-bg-color{background-color:var(--C-bg-color);}
+.D-bg-color{background-color:var(--D-bg-color);}
+/* --------------------------------- */
+.Afont{font-family:Inter,sans-serif;}
+.Bfont{font-family: Playfair Display,serif;}
+
+.lt-text{letter-spacing:0.1rem;}
+/* ----------------display----------------- */
+
+.d-inline-block{display: inline-block;}
+.text-center{text-align: center;}
+/* ----------------vertical-align----------------- */
+.t-vertical-aline{vertical-align: top;}
+.s-vertical-aline{vertical-align: middle;}
+
+/* ----------------width----------------- */
+.w-100{width:100%;}
+.w-75{width:74%;}
+.w-70{width:70%;}
+.w-50{width:48%;}
+.w-25{width:24%;}
+
+/* -------------col-------------- */
+.col-3{text-align: center;
+    width:calc(97%/3);}
+.col-4{text-align: center;
+        width:calc(97%/4);}
+/* ----------------padding---------- */
+   .p-0{padding:0;}
+   .p-1{padding:1%}
+   .p-2{padding:2%;}
+   .p-3{padding:3%;}
+/* ----------------padding---------- */
+.opacity-80{opacity:0.8;}
+/* ----------------margin---------- */
+   .m-0{margin:0;}
+   .m-1{margin:1%;}
+   .m-2{margin:2%;}
+   .m-3{margin:3%;}
+
+   .m-tb-0{margin:0;}
+   .m-tb-1{margin:1% 0;}
+   .m-tb-2{margin:2% 0;}
+   .m-tb-3{margin:3% 0;}
+
+   .m-rl-0{margin:0;}
+   .m-rl-1{margin:0 1% ;}
+   .m-rl-2{margin:0 2% ;}
+   .m-rl-3{margin:0 3% ;}
+
+   /* -------------herosection------------------ */
+   #hero .hero-img{
+    
+    background:url("../images/hero.png");
+    background-size:100% 100%;
+    height:70vh;
+    margin:0 0 0 24%;
+   }
+   #hero .hero-txt{
+    margin: -29% 0 0 0%;
+    height: 16rem;
+    padding:10% 2% 2% 2%;
+    width: 25rem;
+    text-align: center; 
+    vertical-align: middle;
+   }
+   #AboutUs img{
+    width:90%;
+   }
+   #photo-gallery img{
+    width: 99%;
+   }
+   #Testimonial img{
+    width: 99%;
+    background-size:100% 100%;
+    aspect-ratio: 1/1;
+
+   }
+   #footer div{vertical-align: text-top; }
+   #footer p{font-weight:400; font-size:0.9rem;text-align: left;}
+   #footer ul {
+    text-align: center;
+   }
+   

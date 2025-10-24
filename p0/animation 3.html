@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #3498db;
+      position: relative;
+      will-change: transform;
+      transition: transform 0.3s ease;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .pulse {
+      animation: pulse 1s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <button onclick="startAnimation()">تحريك</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script>
+    function startAnimation() {
+      const box = document.querySelector(".box");
+      box.classList.toggle("pulse"); // تشغيل الرسوم المتحركة بـ CSS
+      gsap.to(".box", { x: 200, duration: 0.5, ease: "power2.out" }); // تحريك بـ JS
+    }
+  </script>
+</body>
+</html>

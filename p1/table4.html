@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png" >
+    <title>Index</title>
+    <style>
+
+body{
+    background-color:#bbb;
+}
+table{background-color: #f0f0f0}
+a:link, a:visited {
+    background-color: #f44336;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+  }
+nav ul{
+    list-style-type: none;
+}
+  nav ul li{
+display:inline-block;
+
+ 
+  }
+  #navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+#navbar li{
+    width:50%;
+}
+#navbar li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link and background color on hover */
+#navbar li a:hover {
+  background-color: #555555;
+  color: white;
+}
+    </style>
+</head>
+<body>
+    
+    <table width="70%" align="center" border="2" height="20vh">
+        <tr>
+
+            <td align="center" width="25%"><a href="#">Account</a></td>
+
+            <td align="center" width="25%">
+                <img   type="image/png" src="logo.png" width="25%" style="border-radius:50%" >
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="100%" colspan="3">
+                <nav >
+                    <ul>
+                        <li><a href="#">Home</a></a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Info</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+             </td>
+        </tr>
+
+        <!-- ------------------------------- -->
+         <tr>
+            <td align="center" width="25%" colspan="1" id="navbar">Vertical Navbar
+                <ul >
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><label for="disk_d">Disk usage D:</label>
+                        <meter id="disk_d" value="0.6">60%</meter></li>
+                    <li>
+                        <details>
+                            <summary>Epcot Center</summary>
+                            <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                          </details>
+                    </li>
+                  </ul>
+            </td>
+         </tr>
+
+    </table>
+
+</body>
+</html>

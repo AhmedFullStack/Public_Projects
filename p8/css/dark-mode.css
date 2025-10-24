@@ -1,0 +1,91 @@
+/* 3. لعمل وضع ليلي، فقط نغير المتغيرات */
+body.dark-mode {
+/* ===========================color=========================== */
+--primary-color: #ffffff;
+--secondary-color: #d1d1d1;
+--accent-color: #7e8388;
+--weight-color: #161313;
+--back:#0a0b0c;
+
+
+
+/* ===========================background=========================== */
+--primary-bg-color: var(--primary-color);
+--secondary-bg-color: var(--secondary-color);
+--background-color: #f5f5f5;
+
+
+
+/* ===========================font=========================== */
+--font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+--font-size: 16px;
+--text-color: #333333;
+--font-style: normal;
+/* ============================scrollbar=============================== */
+/* عرض شريط التمرير */
+--scrollbar-width: 10px;
+
+/* =====================border=================== */
+--border-color:var(--accent-color);
+}
+
+  body.mode-2 {
+/* ===========================color=========================== */
+--primary-color: #c40c1b;
+--secondary-color: #9e0419;
+--accent-color: #57020d;
+--weight-color: #fff;
+--back:#1a1b1f;
+
+
+
+/* ===========================background=========================== */
+--primary-bg-color: var(--primary-color);
+--secondary-bg-color: var(--secondary-color);
+--background-color: #f5f5f5;
+
+
+
+/* ===========================font=========================== */
+--font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+--font-size: 16px;
+--text-color: #333333;
+--font-style: normal;
+/* ============================scrollbar=============================== */
+/* عرض شريط التمرير */
+--scrollbar-width: 10px;
+
+/* =====================border=================== */
+--border-color:var(--accent-color);
+}
+
+body.mode-3 {
+/* ===========================color=========================== */
+--primary-color: #d13109;
+--secondary-color: #c27107;
+--accent-color: #7c6708;
+--weight-color: #fff;
+--back:#242b38;
+
+
+
+/* ===========================background=========================== */
+--primary-bg-color: var(--primary-color);
+--secondary-bg-color: var(--secondary-color);
+--background-color: #f5f5f5;
+
+
+
+/* ===========================font=========================== */
+--font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+--font-size: 16px;
+--text-color: #333333;
+--font-style: normal;
+/* ============================scrollbar=============================== */
+/* عرض شريط التمرير */
+--scrollbar-width: 10px;
+
+/* =====================border=================== */
+--border-color:var(--accent-color);
+
+}

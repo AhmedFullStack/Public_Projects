@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+:root{
+    --firstColor:#02b3d2;
+    --backgroundColor:#a97eea;
+}
+body{
+    background-color:var(--backgroundColor);
+    font-family: "Roboto Slab", serif;
+}
+table{
+
+    margin-top:10px;
+    box-shadow:0px 0px 2px #ccc;
+}
+#chat{ 
+ 
+    background-color:var(--firstColor);
+    color:white;
+    text-align: center;
+    padding:20px;
+}
+#chat h1{
+   font-weight:700
+}
+#chat p{
+    text-transform:none;
+   letter-spacing:1px;
+   word-spacing:1px;
+
+}
+
+#contact{
+    background-color:#fff;
+    color:black;
+    text-align:center;
+    padding:20px;
+    
+}
+#contact label{
+    float:left;
+    letter-spacing:1px;
+}
+#contact label span{
+    color:var(--firstColor);
+    margin:5px;
+}
+#contact form input{
+ display: inline-block;
+ text-align:cetner;
+ width: 90%;
+ margin:10px;
+padding:5px;
+background-color:rgba(226, 226, 226, 0.3);
+border:0px
+}
+#contact form textarea{
+    display: inline-block;
+    text-align:cetner;
+    margin:10px;
+padding:5px;
+height: 5rem;
+background-color :rgba(226, 226, 226, 0.3);
+border:0px;
+
+min-width: 22rem;
+max-width: 23rem;
+min-height:7rem;
+max-height:7rem;
+
+overflow-x: auto;
+
+}
+#contact .btn-submit{
+    background-color:var(--firstColor);
+    padding:10px;
+    color:white;
+    width:7rem;
+    border-radius:10%;
+    letter-spacing:2px;
+    font-weight:900;
+    border:0px
+}

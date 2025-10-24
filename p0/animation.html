@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html {
+            scroll-snap-type: y mandatory;
+        }
+        
+        section {
+            height: 100vh;
+            scroll-snap-align: start;
+            position: relative;
+        }
+        
+        .progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: blue;
+            transform-origin: left;
+        }
+        
+        .img-container h2 {
+            position: absolute;
+            color: white;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التقدم -->
+    <div class="progress"></div>
+    
+    <!-- الأقسام ذات العناوين المتحركة -->
+    <section class="img-container" style="background: red;">
+        <h2>القسم 1</h2>
+    </section>
+    <section class="img-container" style="background: green;">
+        <h2>القسم 2</h2>
+    </section>
+    <section class="img-container" style="background: blue;">
+        <h2>القسم 3</h2>
+    </section>
+
+    <script type="module">
+        // الكود الذي شرحته
+        import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm"
+        
+        scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }))
+        
+        document.querySelectorAll(".img-container").forEach((section) => {
+            const header = section.querySelector("h2")
+            scroll(animate(header, { y: [-400, 400] }, { ease: "linear" }), {
+                target: header,
+            })
+        })
+    </script>
+</body>
+</html>

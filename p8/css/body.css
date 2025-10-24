@@ -1,0 +1,35 @@
+/* ====================Scrollbar==================== */
+
+/* ======================body================== */
+body{
+    margin:0;
+    padding:0;
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    background:var(--back);
+    overflow-x: hidden;
+}
+
+  nav {
+    /* لون خلفية شبه شفاف */
+    background-color: var(--weight-color);
+    opacity: 0.9;
+    color:var(--weight-color);
+    
+    /* هذا هو السحر: يضيف تمويهاً (blur) لكل شيء خلف العنصر */
+    backdrop-filter: blur(10px);
+    
+    /* لدعم المتصفحات القديمة */
+    -webkit-backdrop-filter: blur(10px);
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li  {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: var(--secondary-color);
+}

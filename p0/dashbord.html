@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body{
+            background-color:#f0f0f0;
+            -webkit-animation: fadeout 1s both;
+            -moz-animation: fadeout 1s both;
+            -o-animation: fadeout 1s both;
+            animation: fadeout 1s both;
+            margin:20px;
+            font-family: Haettenschweiler, 'Arial Narrow', sans-serif;
+        }
+        nav{background-color:#fff;
+            border-radius:20px;
+        }
+        nav ul{
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            text-align:center;
+            
+        }
+
+        nav ul li{
+            display:inline-block;
+            margin-right:20px;
+            padding:10px;
+            
+        }
+        nav ul li:hover{
+            background-color:#333;
+            border-radius:20px;
+            color:#fff;
+            position:relative;
+            top:-1px;
+            box-shadow: 0px 0px 16px 1px #bbb;
+            
+            
+        }
+        nav ul li:hover a{
+         
+            color:#fff;
+        
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:#333;
+            font-weight:bold;
+        }
+        nav ul li a:hover{
+            color:#fff;
+        }
+        #right-menu{
+            margin-top:20px;
+            background-color:#fff;
+            padding:20px;
+            border-radius:20px;
+            float:right;
+            width: 30%;
+            height:70vh;
+            text-align: center;
+        }
+ 
+
+        #right-menu:hover{
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            position:relative;
+            top:-5px;
+        }
+        #left-menu{
+            margin-top:20px;
+            background-color:#fff;
+            padding:20px;
+            border-radius:20px;
+            float:left;
+            width:  60%;
+            height:70vh;
+            text-align: center;
+        }
+        #left-menu:hover{
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            position:relative;
+            top:-5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" target="_blank">Home</a></li>
+            <li><a href="#" target="_blank">About</a></li>
+            <li><a href="#" target="_blank">Contact Us</a></li>
+            <li><a href="#" target="_blank">Info</a></li>
+            
+        </ul>
+    </nav>
+    <section id="right-menu">
+        <h1>Welcome to the Dashboard</h1>
+        <p>This is a simple dashboard layout with a navigation menu.</p>
+    </section>
+ 
+    <section id="left-menu">
+        <h1>left-menu</h1>
+        <p>This is a simple dashboard layout with a navigation menu.</p>
+    </section>
+
+    
+</body>
+</html>

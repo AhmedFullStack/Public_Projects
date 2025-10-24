@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+  transform: translateX(0);
+ 
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(50vw);
+  width: 200px;
+  height:200px;
+  background-color: #f70;
+}
+.box2 {
+  transform: translateX(0);
+ 
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(50vw);
+  width: 200px;
+  height:200px;
+  background-color: #f70;
+}
+.box:hover {
+ 
+    transform: translateX(100px);
+}
+.button {
+  background-color: #3498db;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #2980b9;
+}
+@keyframes slideIn {
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.element {
+  animation: slideIn 0.5s ease-in-out forwards;
+  width: 200px;
+  height:200px;
+    background-color: #2ecc71;
+    
+}
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="button">a</div>
+    <div class="element">b</div>
+    <div class="box2" onclick="animate()">a</div>
+</body>
+<script>
+    gsap.to(".box2", {
+  x: 100,
+  opacity: 0.5,
+  duration: 0.5,
+  ease: "power2.out"
+});
+    let pos = 0;
+function animate() {
+  pos += 2;
+  document.querySelector(".box2").style.transform = `translateX(${pos}px)`;
+  if (pos < 200) requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
+
+
+const animationState = {
+  x: 0,
+  opacity: 1
+};
+gsap.to(animationState, {
+  x: 100,
+  opacity: 0.5,
+  onUpdate: () => {
+    document.querySelector(".box").style.transform = `translateX(${animationState.x}px)`;
+    document.querySelector(".box").style.opacity = animationState.opacity;
+  }
+});
+
+
+
+document.querySelector(".button").addEventListener("click", () => {
+  gsap.to(".box", { x: 200, duration: 0.3 });
+});
+</script>
+</html>
