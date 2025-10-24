@@ -61,11 +61,11 @@ body.dark-mode {
 
 body.mode-3 {
 /* ===========================color=========================== */
---primary-color: #d13109;
---secondary-color: #c27107;
---accent-color: #7c6708;
+--primary-color: #3409d1;
+--secondary-color: #e0e1e6;
+--accent-color: #051072;
 --weight-color: #fff;
---back:#242b38;
+--back:#202f49;
 
 
 
@@ -79,7 +79,7 @@ body.mode-3 {
 /* ===========================font=========================== */
 --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 --font-size: 16px;
---text-color: #333333;
+--text-color: #f3f3f3;
 --font-style: normal;
 /* ============================scrollbar=============================== */
 /* عرض شريط التمرير */
