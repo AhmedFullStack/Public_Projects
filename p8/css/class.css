@@ -1,6 +1,6 @@
 /* 1. الحاوية الرئيسية (الأب) */
 .dropdown {
-  position: relative; /* أهم خاصية: لجعل المحتوى المنسدل يتموضع نسبة لهذه الحاوية */
+position: relative; /* أهم خاصية: لجعل المحتوى المنسدل يتموضع نسبة لهذه الحاوية */
   display: inline-block; /* لجعلها تتماشى مع العناصر بجانبها */
 }
 
@@ -110,10 +110,13 @@
 .flex-flow-row-wrap{flex-flow:row wrap !important;}
 .flex-flow-column-wrap{flex-flow:column wrap !important;}
 .justify-content-center{justify-content:center !important;}
+.justify-content-baseline{justify-content: baseline;}
 .justify-content-space-evenly{justify-content:space-evenly !important;}
 .justify-content-flex-start{justify-content:flex-start !important;}
 .justify-content-flex-end{justify-content:flex-end !important;}
 .align-items-center{align-items:center !important;}
+.align-items-baseline{align-items:baseline;}
+.align-items-flex-start{align-items:flex-start}
 /* ============flex item================== */
 .flex-basis-100{flex-basis:100% !important;}
 .flex-basis-90{flex-basis:90% !important;}
@@ -306,3 +309,27 @@ list-style-type:none;
 .ul-footer ul li h3{color:#000000;opacity:0.7;}
 
 .ul-footer ul li a{ color:var(--secondary-color);}
+
+.left-menu{
+  padding: 1%;
+  align-items: end;
+  align-items: baseline;
+ 
+}
+.left-menu ul{
+  list-style-type:none;
+  align-items: baseline;
+}
+.left-menu ul li{
+letter-spacing:0.2rem;
+}
+/* تنسيق بسيط لترتيب العناصر */
+
+input[type="range"] {
+  width: 100%; /* اجعل الشريط يملأ العرض */
+}
+#price-output {
+
+  display: block; /* لعرض السعر في سطر جديد */
+  text-align: center;
+}
