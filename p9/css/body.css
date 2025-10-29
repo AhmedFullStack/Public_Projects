@@ -1,0 +1,37 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+* ul {
+  list-style: none;
+  padding: 0;
+}
+* ul li  {
+  color: var(--h1-color);
+  text-decoration: none;
+}
+* ul li a:hover {
+  
+  color: var(--primary-color);
+}
+
+html{
+  background: rgb(0, 0, 0);
+  height: 100%;
+}
+/* ======================body================== */
+
+body{
+
+  font-family: "myfont";
+}
+
+  nav {
+    /* لون خلفية شبه شفاف */
+    background-color: var(--weight-color);
+    opacity: 0.9;
+    color:var(--weight-color);
+    
+    /* هذا هو السحر: يضيف تمويهاً (blur) لكل شيء خلف العنصر */
+    backdrop-filter: blur(10px);
+    
+    /* لدعم المتصفحات القديمة */
+    -webkit-backdrop-filter: blur(10px);
+}

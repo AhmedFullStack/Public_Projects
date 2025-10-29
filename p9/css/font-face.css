@@ -1,0 +1,55 @@
+@font-face{
+    src: url("../fonts/Reem_Kufi/static/ReemKufi-Bold.ttf");
+    font-family: "ReemKufi";
+    font-weight: bold;
+  }
+  @font-face{
+    src: url("../fonts/Reem_Kufi/static/ReemKufi-Medium.ttf");
+    font-family: "ReemKufi";
+    font-weight:400;
+  }
+  .font-1{
+    font-synthesis: style !important;
+    font-stretch: condensed !important;
+    font-family: "ReemKufi" !important;
+    font-weight:400 !important;
+    font-variant-caps:small-caps ;
+    font-variant-position: sub;
+    color:#fff;
+    text-align: center;
+  }
+  /* ===========fonts============= */
+  .font-size-0{line-height: 0.5rem;font-size: 70% !important;}
+.font-size-1{line-height: 1rem;font-size: 70% !important;}
+.font-size-2{line-height: 2rem;font-size: 80% !important;}
+/* ================================= */
+  /* font class */
+  .line-height-100{line-height: 100px;}
+  .text-underline{text-decoration-line: underline;}
+  .text-overline{text-decoration-line: overline;}
+  .text-line-through{text-decoration-line: line-through;}
+  .text-inherit{text-decoration-line: inherit;}
+  .text-styl-dashed{text-decoration-style: dashed;}
+  .text-styl-wavy{text-decoration-style:wavy;}
+  .text-indent{text-indent: 10px;}
+  .text-shadow{text-shadow: 10px 10px 10px #f70;}
+  .text-ellipsis{text-overflow: ellipsis;}
+  .text-align-center{text-align: center;}
+  .text-align-end{text-align: end;}
+  .text-align-start{text-align:start;}
+  .vertical-align-middle{vertical-align:middle;}
+  .white-space-nowrap{white-space: nowrap;}
+  .overflow-wrap-break-word{overflow-wrap: break-word;}
+  .text-justify{text-align:justify; text-justify: auto;}
+  .writing-mode--horizontal-tb{writing-mode: horizontal-tb;}
+  .text-orientation-sideways-right{text-orientation: sideways-right;}
+  .word-spacing-5{word-spacing: 0.5rem;}
+  .letter-spacing-5{letter-spacing: 0.5rem;}
+  .word-break-break-all{word-break: break-all;}
+  .column-count-3{column-count: 3;}
+  .column-rule-style-dashed{column-rule-style:dashed ;}
+  .column-rule-color-red{column-rule-color: red;}
+  .column-rule-width-5{column-rule-width: 5px;}
+  .column-gap-30{column-gap: 30px;}
+  .column-width-150{column-width: 150px;}
+  

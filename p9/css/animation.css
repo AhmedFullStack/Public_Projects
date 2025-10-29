@@ -1,0 +1,35 @@
+
+.animation-delay-3{animation-delay: 3s;}
+.animation-timing-function-5{animation-timing-function: steps(5);}
+.animation-iteration-count-5{animation-iteration-count:5;}
+.animaiton-reverse{animation-direction: reverse;}
+.animation-fill-mode-forwards{animation-fill-mode: forwards;}
+.animation-fill-mode-both{animation-fill-mode: both;}
+.transform-translateX{ transform: translateX(300px);}
+.transform-translateY{ transform: translateY(300px);}
+.transform{transform:translate(30px , 40px);}
+.transform-scaleX{transform:scaleX(30px)}
+.transform-scaleY{transform:scaleY(2)}
+.transform-skewY{transform:skewY(20deg)}
+.transform-skewX{transform:skewX(20deg)}
+.transform-rotateZ-30{transform:rotateZ(30deg)}
+.transform-rotateX-30{transform:rotateX(30deg)}
+.transform-rotateY-30{transform:rotateY(30deg)}
+.transform-origin-center{transform-origin: center;}
+@keyframes x2{
+0%{
+    background: rgb(202, 199, 12);
+    height: 100px;
+    width: 100px;
+}
+50%{
+    background: rgb(189, 7, 134);
+    height: 200px;
+    width: 200px;
+}
+100%{
+    background: rgb(34, 7, 189);
+    height: 300px;
+    width: 300px;
+}
+}

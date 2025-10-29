@@ -148,6 +148,7 @@ position: relative; /* أهم خاصية: لجعل المحتوى المنسدل
 /* =============background color=============== */
 .bg-primary {background: var(--primary-color) !important;}
 .bg-secondary {background: var(--secondary-color) !important;}
+.bg-weight{background:var(--weight-color);}
 /* ============padding ==========*/
 .p-0 {padding: 0 !important;}
 .p-5 {padding: 5px !important;}

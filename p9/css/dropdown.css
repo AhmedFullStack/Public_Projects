@@ -1,0 +1,47 @@
+/* 1. الحاوية الرئيسية (الأب) */
+.dropdown {position: relative; /* أهم خاصية: لجعل المحتوى المنسدل يتموضع نسبة لهذه الحاوية */
+  display: inline-block; /* لجعلها تتماشى مع العناصر بجانبها */
+}
+
+/* 2. تنسيق الزر (اختياري) */
+.dropdown-btn {
+  background-color: var(--weight);
+  color: var(--secondary-color);
+  border: none;
+  cursor:pointer;
+}
+
+/* 3. المحتوى المنسدل (الابن) */
+.dropdown-content {
+  display: none; /* إخفاء القائمة في البداية */
+  position: absolute; /* جعل القائمة تطفو فوق المحتوى الآخر */
+  background-color: #f9f9f9;
+  min-width: 160px; /* تحديد عرض أدنى للقائمة */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* إضافة ظل لتبدو بارزة */
+  z-index: 1; /* لضمان ظهورها فوق كل العناصر الأخرى */
+}
+
+/* 4. تنسيق الروابط داخل القائمة المنسدلة */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none; /* إزالة الخط تحت الرابط */
+  display: block; /* جعل كل رابط يأخذ سطراً كاملاً */
+}
+
+/* 5. تغيير لون الروابط عند تمرير الفأرة عليها */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* 6. "السحر" هنا: إظهار القائمة المنسدلة */
+/* عند تمرير الفأرة (hover) فوق الحاوية (dropdown) */
+/* قم باختيار الابن (dropdown-content) واجعل عرضه (block) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 7. تغيير لون الزر عندما تكون القائمة مفتوحة (اختياري) */
+.dropdown:hover .dropdown-btn {
+  background-color: #0056b3;
+}

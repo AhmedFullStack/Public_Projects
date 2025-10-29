@@ -1,0 +1,9 @@
+/* =================Table========================= */
+.table{display:table !important;border: 1px solid var(--border-color) !important;width: 100% !important;}
+.caption{display:table-caption !important;}
+.row{display:table-row !important;background-color: var(--primary-bg-color);}
+.cell{display:table-cell !important;color:var(--weight-color)}
+.thead{display:table-header-group !important;}
+.tbody{display:table-row-group !important;}
+.tfooter{display:table-footer-group !important;}
+/* ========================imgs=========================== */

@@ -1,0 +1,7 @@
+.primary-color{color: var(--primary-color);}
+.secondary-color{color:var(--secondary-color);}
+.accent-color{color:var(--accent-color)};
+.weight-color{color:var(--weight-color)};
+.bg{color:var(--back);}
+.h1-color{color:var(--h1-color);}
+.a-color{color:var(--h1-color);}
