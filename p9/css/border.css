@@ -4,4 +4,6 @@
     border-color: red green blue black;}
 
 .br-none{border:none !important;}
-.br-1{border:1px solid var(--border-color) !important;}
+.br-1{
+    border:1px solid var(--border-color) !important;
+    box-sizing: border-box;}
