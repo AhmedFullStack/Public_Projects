@@ -54,6 +54,10 @@ body{perspective: 1000px;}
 * div{
   /* border:1px dashed #d9d9d9; */
 }
+* input{
+    border: none !important;
+    outline: none !important;
+}
 /* -------------dropdown------------ */
 .dropdown{
     position: relative;
