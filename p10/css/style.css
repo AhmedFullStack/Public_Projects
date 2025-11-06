@@ -46,6 +46,8 @@
 .m-tm-2{margin: 2% 0;}
 .m-tm-1{margin: 1% 0;}
 .m-rl-1{margin: 0 1%;}
+.p-1{padding:1% !important;}
+.m-1{margin:1% !important;}
 .padding-10{padding: 10rem 0;}
 .align-items-center{align-items: center;}
 .align-items-baseline{align-items: baseline;}
@@ -57,16 +59,20 @@
 
 .w-80{width: 80%; }
 .w-70{width: 70%; }
+.w-65{width: 65%; }
 .w-60{width: 60%; }
 .w-50{width: 50%;}
 .w-30{width: 30%;}
 .w-55{width: 55%; }
 .w-45{width:45%; }
 .w-40{width:40%; }
+.w-35{width:35%;}
 .w-30{width:30%;}
 .w-20{width:20%;}
 .w-15{width:15%;}
 .w-10{width:10%;}
+.w-5{width:5%;}
+.w-3{width:3%;}
 
 .bg-red{background-color:rgb(134, 87, 106);}
 .bg-green{background-color:green;}
@@ -119,10 +125,10 @@ nav ul{
 }
  
 
-* div{
+/* * div{
 
 border: 1px solid  transparent;
-}
+} */
 .list-icon{
     background-color: #fff;
 }
@@ -138,18 +144,20 @@ border: 1px solid  transparent;
     overflow: hidden;
     background-color:#1f1f1f;
    color: #fff;
-    padding: 2%;
+    padding: 0%;
     border-radius: 20px;
  
-   
+   .text-flow{
+    padding: 5%;
+   }
  
 }
 * img{ 
     
     transition: all 3s;}
 * img:hover {
-    transform: matrix(1, 0, 0, 0.9, 11, 0);
-    border-radius: 20px;
+    transform: matrix(1, 0, 0, 0.9, 5, 0);
+    border-radius: 10px;
 }
 
 .section1-center span,button{

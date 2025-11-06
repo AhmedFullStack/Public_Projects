@@ -1,38 +1,104 @@
+
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشاريعي</title>
-    <style>
-        body { font-family: sans-serif; margin: 40px; }
-        ul { list-style: none; padding: 0; }
-        li { margin: 15px 0; }
-        a { 
-            text-decoration: none; 
-            font-size: 1.2em; 
-            color: #0366d6; 
-        }
-        a:hover { text-decoration: underline; }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/fontawsam-all.js"></script>"
+    <title>NTI Session 1</title>
 </head>
 <body>
-    <h1>ملف مشاريعي (My Projects)</h1>
-    <p>أهلاً بك في صفحة مشاريعي. اضغط على أي رابط لعرض المشروع.</p>
+        <!-- ============================= -->
+    <nav>
+        <div class="progress"></div>      
+        <ul>
+            <li><a href="#section1" >Home</a></li>
+            <li><a href="#section2" >About</a></li>
+            <li><a href="#section3" >Contact Us</a></li>
+            <li><a href="#section4" >Info</a></li>
+            
+        </ul>
+        
+    </nav>
+    <!-- ============================= -->
+    <section id="section1" class="section">
+           
+        <div>
 
-    <ul>
-        <li><a href="./p1/"> المشروع الأول (اكتب وصفاً هنا) </a></li>
-        <li><a href="./p2/"> المشروع الثاني (وصف) </a></li>
-        <li><a href="./p3/"> المشروع الثالث (وصف) </a></li>
-        <li><a href="./p4/"> المشروع الرابع (وصف) </a></li>
-        <li><a href="./p5/"> المشروع الخامس (وصف) </a></li>
-        <li><a href="./p6/"> المشروع السادس (وصف) </a></li>
-        <li><a href="./p7/"> المشروع السابع (وصف) </a></li>
-        <li><a href="./p8/"> المشروع الثامن (وصف) </a></li>
-        <li><a href="./p9/"> المشروع التاسع (وصف) </a></li>
-        <li><a href="./p10/"> المشروع العاشر (وصف) </a></li>
-        <li><a href="./p11/"> المشروع الحادي عشر (وصف) </a></li>
-    </ul>
+            <section id="right-menu">
+                <div class="logo">
+                    <img src="images/1.jpg" alt="Logo" />
 
+                    
+                </div>
+                <h3>Ahmed AlaaEldin</h3>
+                
+            </section>
+         
+            <section id="left-menu" class="d-inline-block ">
+            <div class="container ">
+                    <ul class="w-100 text-center bg-Acolor br-25" >
+                        <li class="d-inline-block w-100 p-rt-2"><a class="w-100 Acolor b" target="_blank" href="https://kafiil.com/u/AhmedFullStack"><img class="w-100" src="images/logos/kafiil.svg"></a></li>
+                        <li class="d-inline-block w-100 p-rt-2"><a class="w-100 Acolor b" target="_blank" href="https://khamsat.com/user/best_developer"><img class="w-100" src="images/logos/khamsat.png"></a></li>
+                        <li class="d-inline-block w-100 p-rt-2"><a class="w-100 Acolor b" target="_blank" href="https://github.com/AhmedFullStack"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="d-inline-block w-100 p-rt-2"><a class="w-100 Acolor b" target="_blank" href="https://kafiil.com/u/AhmedFullStack"><img class="w-100" src="images/logos/kafiil.svg"></a></li>
+                    </ul>
+            </div>
+            </section>
+        
+        </div>
+    </section>
+    <hr/>
+    <!-- --------------------------------------------- -->
+    <section id="section2" class="img-container">
+        <div>
+            <img src="images/projects/p11.png" />
+            <h2 class="bg-Acolor">رابط المشروع 
+                <a href="https://ahmedfullstack.github.io/Public_Projects/p11/index.html" target="_blank">p11</a>
+            </h2>
+        </div>
+    </section>
+    <section id="section3" class="img-container">
+        <div>
+            <img src="images/projects/p10.png" />
+            <h2 class="bg-Acolor">رابط المشروع 
+                <a href="https://ahmedfullstack.github.io/Public_Projects/p10/index.html" target="_blank">p10</a>
+            </h2>
+        </div>
+    </section>
+    <section id="section4" class="img-container">
+        <div>
+            <img src="images/projects/p8.png" />
+            <h2 class="bg-Acolor">رابط المشروع 
+                <a href="https://ahmedfullstack.github.io/Public_Projects/p8/index.html" target="_blank">p8</a>
+            </h2>
+        </div>
+    </section>
+    <section id="section5" class="img-container">
+        <div>
+            <img src="images/projects/p5.png" />
+            <h2 class="bg-Acolor">رابط المشروع 
+                <a href="https://ahmedfullstack.github.io/Public_Projects/p5/index.html" target="_blank">p5</a>
+            </h2>
+        </div>
+    </section>
+
+    
+    <script type="module">
+        import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm"
+    
+        // Progress bar representing gallery scroll
+        scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }))
+    
+        document.querySelectorAll(".img-container").forEach((section) => {
+            const header = section.querySelector("h2")
+            scroll(animate(header, { y: [-400, 400] }, { ease: "linear" }), {
+                target: header,
+            })
+        })
+    </script>
+    
+    
 </body>
 </html>
