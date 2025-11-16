@@ -31,7 +31,7 @@
           <div class=" col-6 row">
              <!-- -----lang--- -->
                      <div class=" col-5 p-3">
-                        <a class="w-100  text-decoration-none text-light" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                        <a class="w-100  text-decoration-none text-light " type="button" data-bs-toggle="dropdown" aria-expanded="true">
                                 <img  src="images/english.png" alt=""> 
                                               English 
                                                 <i class="fa-solid fa-chevron-down"></i>
@@ -93,16 +93,38 @@
     </div>
 
   </section>
-<!-- -------------------------------- -->
+<!-- ----------------section main-navbar---------------- -->
   <section>
-        <nav class="navbar navbar-dark p-3  ">
+        <nav class="navbar navbar-dark p-2  ">
             <div class="container-fluid row justify-content-between">
+              <!-- ----offcanvas start mobile only---- -->
+               <div class="col-2 col-sm-2  d-sm-block d-xl-none d-lg-none d-md-none ">
+                <div class="btn  " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                  <div class="svg-container">
+                    <svg class="w-100" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none">
+                      <path d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z" fill="#000000"/>
+                      <path d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z" fill="#000000"/>
+                      <path d="M3 17C2.44772 17 2 17.4477 2 18C2 18.5523 2.44772 19 3 19H21C21.5523 19 22 18.5523 22 18C22 17.4477 21.5523 17 21 17H3Z" fill="#000000"/>
+                      </svg>
+                  </div>
+                </div>
+
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                      <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <p>Try scrolling the rest of the page to see this option in action.</p>
+                      </div>
+                    </div>
+               </div>
               <!-- --------------logo and contact------------ -->
-             <div class="col-lg-4 col-md-3 justify-content-between align-items-center p-0 bg-b-color row">
+             <div class="col-6 col-lg-4 col-md-3  col-sm-6 col-xs-6  justify-content-center align-items-center p-0  row">
               <!-- -------logo img-------- -->
-                                 <div class=" col-lg-6 col-md-12 row align-items-center p-0">
-                <img src="images/logo/logo.png" alt="" class="w-75">
-              </div>
+                                 <div class=" col-lg-6 col-md-12 row justify-content-center align-items-center p-0">
+                                  <img src="images/logo/logo.png" alt="" class="w-75">
+                                </div>
               <!-- -------------- -->
                                <!-- ----- Contact us-------- -->
                                <div class="col-6 d-lg-block d-md-none d-sm-none d-none  row justify-content-between align-items-center">
@@ -114,9 +136,9 @@
                                     <path d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90532 10.1147 9.8278C10.1147 9.8278 10.1147 9.8278 10.1147 9.8278C10.1146 9.82792 8.99588 10.9468 11.0245 12.9755C13.0525 15.0035 14.1714 13.8861 14.1722 13.8853C14.1722 13.8853 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
                                     </svg>
                                 </div>
-                                <div class="  col-10 row p-0">
-                                  <span class=" col-12  h-50  text-decoration-none fs-6 lh-sm">Contact us 24/7</span>
-                                  <span class=" col-12  h-50  text-decoration-none fs-6 fw-bold">(+92) 3942 7879</span>
+                                <div class="  col-11 row p-1 align-items-center">
+                                <p class=" col-12    text-decoration-none f-size-1 my-1">Contact us 24/7</p>
+                                 <p class=" col-12     text-decoration-none f-size-1 my-1 fw-bold">(+92) 3942 7879</p>
                                  
                                 </div>
                               
@@ -124,145 +146,215 @@
                             </div>
             </div>
 
-              <!-- ----------search---------- -->
-              <div class="col-lg-4 col-md-6 bg-b-color row justify-content-center  align-items-center p-1 br-10">
-                <div class=" col-5 h-100 row align-items-center p-0">
-                   <span class="row  col-8 h-100  align-items-center p-0">
-                    All Category</span>
-                    <span class=" col-1 fa-solid fa-chevron-down"></span>
-                    <span class="d-color  col-1">|</span>
+              <!-- ----------search- only in lg md --------- -->
+              <div class="row col-2 col-md-6 col-lg-4  d-lg-flex  d-xl-flex d-md-flex d-sm-none d-none    bg-b-color justify-content-center  align-items-center p-0 m-0 br-10">
+                
+                <div class=" col-5 h-100 row align-items-center p-0 m-0 br-r-1">
+                   <div class="row all-category position-relative  col-12 h-100  align-items-center p-1">
+                    <a class="col-9     f-size-1 text-decoration-none c-color">All Category</a>
+                    <div class="col-3 svg-container  ">
+                      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none"><path d="M11.9999 19L17.9999 13M11.9999 19L5.99988 13M11.9999 19L11.9999 5" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                     </div>
+                    <ul class="position-absolute overflow-auto p-0">
+                      <li>Accessories</li>
+                      <li>Wheels</li>
+                      <li>Cases</li>
+                      <li>Mask</li>
+                      <li>Shirts</li>
+                      <li>Decor</li>
+                      <li>Game Accessories</li>
+                      <li>Sectionals</li>
+                      <li>Smartphone</li>
+                      <li>Tablet</li>
+                    </ul>
+                  </div>
+                   
+                    
                      
                 </div>
                
-                <div class=" col-5 row p-0">
-                  <form class=" col-9 row  align-items-center p-0">
-                    <input class=" col-12 bg-b-color h-100 border-0 outline-none" type="search" name="search" placeholder="search for products">
-                  
+                <div class="col-6 p-0">
+                  <form class="col-12 row  align-items-center p-0">
+                    <input class="col-9 bg-b-color h-100 border-0 outline-none" type="search" name="search" placeholder="search for products">
+                    <button class="col-3 as1-1 br-10  bg-c-color border-0 ">
+                      <div class="svg-container b-color">
+                        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                          <path d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                       </div>
+                        
+                      </button>
                   </form>
-                  <button class=" col-3  as1-1 br-10  bg-c-color border-0 ms-2">
-                   <div class="svg-container b-color">
-                    <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                      <path d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                   </div>
-                    
-                  </button>
+                  
+                  
                 </div>
 
               </div>
            <!-- ----------------------------------------------------------- -->
               <!-- -------right-3-column ------------- -->
-            <div class="col-lg-4 col-md-3 row justify-content-between align-content-center  p-1 bg-b-color">
+            <div class="row col-3 col-sm-3  col-md-3 col-lg-4  p-0  justify-content-center align-content-center  ">
 
-                  
-                  <div class=" col-lg-6 row d-lg-flex d-md-none    justify-content-evenly align-content-center  ">
-                                    <!-- -----lang--- -->
-                                    <div class="col-lg-6  row justify-content-between align-items-center p-0">
-                                                      <div class="dropdown">
-                                                              <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                      <img  src="images/english.png" alt=""> 
-                                                                                English 
-                                                                     
-                                                              </button>
-                                                        <ul class="dropdown-menu">
-                                                                      <li>
-                                                                            <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#"> 
-                                                                            <img class="w-30" src="images/francais.png" alt=""> 
-                                                                                  Français
-                                                                            </a>
-                                                                      </li>
-                                                                      
-                                                                      <li>    
-                                                                            <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#">
-                                                                            <img class="w-30" src="images/portugues.png" alt=""> 
-                                                                                 Português
-                                                                            </a>
-                                                                      </li>
-                                                      
-                                                        </ul>
-                                                      </div>
+              <!-- lang-usd -->
+                  <div class="row col-lg-6  d-xl-flex d-lg-flex d-md-none d-sm-none  justify-content-evenly align-content-center  ">
+                <!-- -----lang--- -->
+                <div class="col-lg-5 d-lg-flex d-md-flex d-sm-none d-none  row justify-content-between align-items-center p-0">
+                                  <div class="lang-menu row  col-12 justify-content-center align-items-center  p-0 position-relative">
+                                           
+                                                  <img class="col-4 p-0 m-0"  src="images/english.png" alt=""> 
+                                                    <p class="col-8 p-0 m-0"> English </p> 
+                                                  
+                                          
+                                    <ul class="position-absolute p-0 col-12">
+                                                  <li>
+                                                        <a class="col-12 p-0 m-0 row text-decoration-none w-auto p-3  " href="#"> 
+                                                        <img class="col-4 w-30 p-0 m-0" src="images/francais.png" alt=""> 
+                                                              <p class="col-8 p-0 m-0">Français</p>
+                                                        </a>
+                                                  </li>
+                                                  
+                                                  <li>    
+                                                        <a class="col-12 p-0 m-0 row text-decoration-none w-auto p-3 " href="#">
+                                                        <img class="col-4 w-30 p-0 m-0" src="images/portugues.png" alt=""> 
+                                                           <p class="col-8 p-0 m-0"> Português</p>
+                                                        </a>
+                                                  </li>
+                                  
+                                    </ul>
+                                  </div>
                                     
                                   </div>
                                       <!-- -----usd--- -->
-                                  <div class=" col-lg-6  row justify-content-between align-items-center p-0 align-items-center "> 
-                                    <div class="dropdown">
-                                      <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <a class="text-decoration-none c-color" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                                      
-                                          USD
-                                         
-                                        </a>
-                                      </button>
-                                      <ul class="dropdown-menu">
-                                        <li>
-                                          <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#">  
-                                          EUR
-                                      </a>
-                                    </li>
-                                        <li>
-                                          <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#">
-                                          
-                                            BRL
-                                        </a>
-                                        </li>
-                                      
-                                      </ul>
-                                    </div>
-                                
+                    <div class="col-lg-5 d-lg-flex d-md-flex d-sm-none d-none row justify-content-between align-items-center  align-items-center "> 
+                      <div class="usd-menu  position-relative">
+                        USD
                       
-                                  </div>
-                  </div>
-                  <div class=" col-lg-3 col-md-5 row  justify-content-between align-items-center p-0 ">
-                                  <!-- ----- account----- -->
-                 
-                    <a href="#" class=" col-lg-6col-md-12 row justify-content-center align-items-center p-0">
-                      <div class="svg-container row  align-items-center">
-                        <svg class="col-lg-6 col-md-12" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none">
-                          <circle cx="12" cy="6" r="4" stroke="#1C274C" stroke-width="1.5"/>
-                          <path d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                          </svg>
-                          <span class="col-4  d-lg-block d-md-nond d-sm-none d-none  ">Account</span>
+                        <ul class="position-absolute p-0">
+                          
+                          <li class="col-12">
+                            <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#">  
+                            EUR
+                        </a>
+                      </li>
+                          <li class="col-12">
+                            <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#">
+                            
+                              BRL
+                          </a>
+                          </li>
+                        
+                        </ul>
                       </div>
-                    
-                    </a>
-
-                 
+                  
+        
+                    </div>
                   </div>
-                  <div class=" col-lg-3 col-md-8 row  justify-content-between  align-items-center p-0 ">
-                                        <!-- ------2 icons----- -->
-                        <div class=" col-12 row justify-content-between overflow-hidden align-items-center p-0">
-                          <div class=" col-6">
-                                  <a href="#">
-                                      <div class="svg-container">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Uploaded to svgrepo.com" viewBox="0 0 32 32" xml:space="preserve">
-                                          <style type="text/css">
-                                            .open_een{fill:#1C274C;}
-                                          </style>
-                                          <g>
-                                            <g>
-                                              <path class="open_een" d="M16,30c-0.46,0-0.888-0.206-1.174-0.566L4.794,16.301c-0.168-0.22-0.126-0.533,0.094-0.701    c0.219-0.166,0.532-0.125,0.701,0.094l10.026,13.125c0.178,0.225,0.586,0.232,0.775-0.007    c0.108-0.142,11.401-14.926,11.581-15.169c0.95-1.537,1.26-3.41,0.849-5.242c-0.592-2.643-2.778-4.76-5.44-5.268    c-2.538-0.486-5.035,0.934-6.526,2.423c-0.601,0.597-1.536,0.597-2.133,0c-0.983-0.981-1.992-1.686-2.997-2.093    c-1.025-0.416-2.068-0.526-3.104-0.33C5.958,3.641,3.771,5.758,3.18,8.4c-0.411,1.832-0.102,3.705,0.869,5.273    c0.146,0.235,0.073,0.543-0.161,0.688c-0.234,0.145-0.543,0.073-0.688-0.162c-1.11-1.792-1.464-3.929-0.996-6.018    c0.679-3.026,3.182-5.45,6.229-6.032c1.225-0.233,2.459-0.104,3.666,0.385c1.13,0.457,2.249,1.235,3.329,2.312    c0.205,0.204,0.514,0.206,0.719,0c1.674-1.67,4.505-3.254,7.421-2.697c3.048,0.582,5.551,3.006,6.229,6.032    c0.468,2.089,0.114,4.226-0.996,6.018c-0.018,0.029-0.039,0.063-11.621,15.227C16.888,29.794,16.46,30,16,30z"/>
-                                            </g>
-                                            <g>
-                                              <path class="open_een" d="M16,30c-0.46,0-0.888-0.206-1.174-0.566L4.794,16.301c-0.168-0.22-0.126-0.533,0.094-0.701    c0.219-0.166,0.532-0.125,0.701,0.094l10.026,13.125c0.178,0.225,0.586,0.232,0.775-0.007    c0.108-0.142,11.401-14.926,11.581-15.169c0.95-1.537,1.26-3.41,0.849-5.242c-0.592-2.643-2.778-4.76-5.44-5.268    c-2.538-0.486-5.035,0.934-6.526,2.423c-0.601,0.597-1.536,0.597-2.133,0c-0.983-0.981-1.992-1.686-2.997-2.093    c-1.025-0.416-2.068-0.526-3.104-0.33C5.958,3.641,3.771,5.758,3.18,8.4c-0.411,1.832-0.102,3.705,0.869,5.273    c0.146,0.235,0.073,0.543-0.161,0.688c-0.234,0.145-0.543,0.073-0.688-0.162c-1.11-1.792-1.464-3.929-0.996-6.018    c0.679-3.026,3.182-5.45,6.229-6.032c1.225-0.233,2.459-0.104,3.666,0.385c1.13,0.457,2.249,1.235,3.329,2.312    c0.205,0.204,0.514,0.206,0.719,0c1.674-1.67,4.505-3.254,7.421-2.697c3.048,0.582,5.551,3.006,6.229,6.032    c0.468,2.089,0.114,4.226-0.996,6.018c-0.018,0.029-0.039,0.063-11.621,15.227C16.888,29.794,16.46,30,16,30z"/>
-                                            </g>
-                                          </g>
-                                          </svg>
-                                      </div>
-                                  </a>
-                          </div>
-                          <div class=" col-6">
-                                <a href="#">
-                                  <div class="svg-container">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none">
-                                      <path d="M2 3L2.26491 3.0883C3.58495 3.52832 4.24497 3.74832 4.62248 4.2721C5 4.79587 5 5.49159 5 6.88304V9.5C5 12.3284 5 13.7426 5.87868 14.6213C6.75736 15.5 8.17157 15.5 11 15.5H13M19 15.5H17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                                      <path d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z" stroke="#1C274C" stroke-width="1.5"/>
-                                      <path d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z" stroke="#1C274C" stroke-width="1.5"/>
-                                      <path d="M5 6H8M5.5 13H16.0218C16.9812 13 17.4609 13 17.8366 12.7523C18.2123 12.5045 18.4013 12.0636 18.7792 11.1818L19.2078 10.1818C20.0173 8.29294 20.4221 7.34853 19.9775 6.67426C19.5328 6 18.5054 6 16.4504 6H12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+
+                   <!-- ------3 icons----- -->
+                  <div class="row col-12 col-sm-12 col-md-12 col-lg-6   justify-content-between  align-items-center p-0 ">
+                                        <!-- ------3 icons----- -->
+                        <div class="col-12 row justify-content-center  align-items-center p-0">
+
+                              <div class="col-4 col-sm-4 col-md-4 col-lg-6  d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
+                                <a href="#" >
+                                  <div class="svg-container row  align-items-center">
+                                    <svg class="col-lg-5 col-md-12" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none">
+                                      <circle cx="12" cy="6" r="4" stroke="#1C274C" stroke-width="1.5"/>
+                                      <path d="M19.9975 18C20 17.8358 20 17.669 20 17.5C20 15.0147 16.4183 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C14.231 22 15.8398 21.8433 17 21.5634" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
                                       </svg>
-                                    </div>
+                                      <span class="col-6     d-none d-sm-none d-md-nond d-lg-block  p-0 ">Account</span>
+                                  </div>
+                                
+                                </a>
+            
+                            </div>
+
+                              <div class="col-4 col-sm-4 col-md-4 col-lg-3 d-none d-sm-none d-md-block  d-lg-block  d-xl-block ">
+                                      <a href="#">
+                                        <span  class="  position-relative col-3">
+                                          <div class="svg-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Uploaded to svgrepo.com" viewBox="0 0 32 32" xml:space="preserve">
+                                              <style type="text/css">
+                                                .open_een{fill:#1C274C;}
+                                              </style>
+                                              <g>
+                                                <g>
+                                                  <path class="open_een" d="M16,30c-0.46,0-0.888-0.206-1.174-0.566L4.794,16.301c-0.168-0.22-0.126-0.533,0.094-0.701    c0.219-0.166,0.532-0.125,0.701,0.094l10.026,13.125c0.178,0.225,0.586,0.232,0.775-0.007    c0.108-0.142,11.401-14.926,11.581-15.169c0.95-1.537,1.26-3.41,0.849-5.242c-0.592-2.643-2.778-4.76-5.44-5.268    c-2.538-0.486-5.035,0.934-6.526,2.423c-0.601,0.597-1.536,0.597-2.133,0c-0.983-0.981-1.992-1.686-2.997-2.093    c-1.025-0.416-2.068-0.526-3.104-0.33C5.958,3.641,3.771,5.758,3.18,8.4c-0.411,1.832-0.102,3.705,0.869,5.273    c0.146,0.235,0.073,0.543-0.161,0.688c-0.234,0.145-0.543,0.073-0.688-0.162c-1.11-1.792-1.464-3.929-0.996-6.018    c0.679-3.026,3.182-5.45,6.229-6.032c1.225-0.233,2.459-0.104,3.666,0.385c1.13,0.457,2.249,1.235,3.329,2.312    c0.205,0.204,0.514,0.206,0.719,0c1.674-1.67,4.505-3.254,7.421-2.697c3.048,0.582,5.551,3.006,6.229,6.032    c0.468,2.089,0.114,4.226-0.996,6.018c-0.018,0.029-0.039,0.063-11.621,15.227C16.888,29.794,16.46,30,16,30z"/>
+                                                </g>
+                                                <g>
+                                                  <path class="open_een" d="M16,30c-0.46,0-0.888-0.206-1.174-0.566L4.794,16.301c-0.168-0.22-0.126-0.533,0.094-0.701    c0.219-0.166,0.532-0.125,0.701,0.094l10.026,13.125c0.178,0.225,0.586,0.232,0.775-0.007    c0.108-0.142,11.401-14.926,11.581-15.169c0.95-1.537,1.26-3.41,0.849-5.242c-0.592-2.643-2.778-4.76-5.44-5.268    c-2.538-0.486-5.035,0.934-6.526,2.423c-0.601,0.597-1.536,0.597-2.133,0c-0.983-0.981-1.992-1.686-2.997-2.093    c-1.025-0.416-2.068-0.526-3.104-0.33C5.958,3.641,3.771,5.758,3.18,8.4c-0.411,1.832-0.102,3.705,0.869,5.273    c0.146,0.235,0.073,0.543-0.161,0.688c-0.234,0.145-0.543,0.073-0.688-0.162c-1.11-1.792-1.464-3.929-0.996-6.018    c0.679-3.026,3.182-5.45,6.229-6.032c1.225-0.233,2.459-0.104,3.666,0.385c1.13,0.457,2.249,1.235,3.329,2.312    c0.205,0.204,0.514,0.206,0.719,0c1.674-1.67,4.505-3.254,7.421-2.697c3.048,0.582,5.551,3.006,6.229,6.032    c0.468,2.089,0.114,4.226-0.996,6.018c-0.018,0.029-0.039,0.063-11.621,15.227C16.888,29.794,16.46,30,16,30z"/>
+                                                </g>
+                                              </g>
+                                              </svg>
+
+                                            </div>
+                                          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                            0
+                                            <span class="visually-hidden">unread messages</span>
+                                          </span>
+                                        </span>
+                                      </a>
+                              </div>
+
+                              <!-- --------icon search d-mobile------ -->
+                               
+                              <div class="col-6 col-sm-6 col-md-4 col-lg-3 d-flex d-sm-flex d-md-none d-lg-nond d-xl-none  ">
+                                <a href="#">
+                            
+                                    <span  class="  position-relative col-3">
+                                      <div class="svg-container">
+                                        <svg  class="col-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#1C274C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                          </svg>
+                                        </div>
+                                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        0
+                                        <span class="visually-hidden">unread messages</span>
+                                      </span>
+                                    </span>
+
                                   
                                 </a>
-                          </div>
+                              </div>
+                              <!-- --------end icon search d-mobile------ -->
+                              
+                              <div class="col-6 col-sm-6 col-md-4 col-lg-3    ">
+                                <a href="#"  data-bs-toggle="offcanvas" data-bs-target="#cart-offset" aria-controls="cart-offset">
+                            
+                                    <span  class="  position-relative col-3">
+                                      <div class="svg-container">
+                                        <svg class="col-12" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none">
+                                          <path d="M2 3L2.26491 3.0883C3.58495 3.52832 4.24497 3.74832 4.62248 4.2721C5 4.79587 5 5.49159 5 6.88304V9.5C5 12.3284 5 13.7426 5.87868 14.6213C6.75736 15.5 8.17157 15.5 11 15.5H13M19 15.5H17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                                          <path d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z" stroke="#1C274C" stroke-width="1.5"/>
+                                          <path d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z" stroke="#1C274C" stroke-width="1.5"/>
+                                          <path d="M5 6H8M5.5 13H16.0218C16.9812 13 17.4609 13 17.8366 12.7523C18.2123 12.5045 18.4013 12.0636 18.7792 11.1818L19.2078 10.1818C20.0173 8.29294 20.4221 7.34853 19.9775 6.67426C19.5328 6 18.5054 6 16.4504 6H12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                                          </svg>
+                                        </div>
+                                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        0
+                                        <span class="visually-hidden">unread messages</span>
+                                      </span>
+                                    </span>
+
+                                  
+                                </a>
+                                <!-- --------cart offcanvas---- -->
+
+                                
+
+
+                                <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="cart-offset" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                  <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                                      Shopping Cart (0 items)
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                  </div>
+                                  <div class="offcanvas-body">
+                                    <p>Try scrolling the rest of the page to see this option in action.</p>
+                                  </div>
+                                </div>
+                                <!-- --------end cart offcanvas---- -->
+                              </div>
 
                         </div>
                   </div>
@@ -271,12 +363,471 @@
 
             </div>
            
-  
-              
-            
-            </div>
+   </div>
           </nav>
-      </section>
+  </section>
+<!-- -------------------section menu category ------------------------ -->
+ <section>
+  <div class="container-fluid   br-tm-1">
+           <!-- -----------offcanvas Shop by Categories---------- -->
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasCategories" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header bg-c-color">
+      
+      <a class="f-size-1 col-12 b-color  row justify-content-center align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategories" aria-controls="offcanvasCategories" href="#">
+
+        <div class="svg-container col-2 p-0 m-0">
+          <svg class="w-75 b-color" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none">
+            <path d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z" fill="#fff"/>
+            <path d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z" fill="#fff"/>
+            <path d="M3 17C2.44772 17 2 17.4477 2 18C2 18.5523 2.44772 19 3 19H21C21.5523 19 22 18.5523 22 18C22 17.4477 21.5523 17 21 17H3Z" fill="#fff"/>
+            </svg>      </div>
+        <p class="col-8 p-0 m-0 fw-bold">Shop by Categories</p>
+    </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="row p-0 m-0 list-style-none">
+    <!-- ------------------------ -->
+        <li class="col-12 row p-0 m-0 my-2">
+          <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+              <p class="col-10 p-0 m-0 fw-bold">Homepages</p>
+              <div class="svg-container col-2 p-0 m-0">
+                    <svg class="w-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>    
+               </div>
+          </a>
+      </li>
+      <!-- ------------------- -->
+           <!-- ------------------------ -->
+           <li class="col-12 row p-0 m-0 my-2">
+            <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                <p class="col-10 p-0 m-0 fw-bold">Phone & Tablet</p>
+                <div class="svg-container col-2 p-0 m-0">
+                      <svg class="w-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>    
+                 </div>
+            </a>
+        </li>
+        <!-- ------------------- -->
+             <!-- ------------------------ -->
+        <li class="col-12 row p-0 m-0 my-2">
+          <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+              <p class="col-10 p-0 m-0 fw-bold">Laptop & Computer</p>
+              <div class="svg-container col-2 p-0 m-0">
+                    <svg class="w-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>    
+               </div>
+          </a>
+      </li>
+      <!-- ------------------- -->
+           <!-- ------------------------ -->
+           <li class="col-12 row p-0 m-0 my-2">
+            <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                <p class="col-10 p-0 m-0 fw-bold">TV, Audio</p>
+                <div class="svg-container col-2 p-0 m-0">
+                      <svg class="w-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>    
+                 </div>
+            </a>
+        </li>
+        <!-- ------------------- -->
+             <!-- ------------------------ -->
+        <li class="col-12 row p-0 m-0 my-2">
+          <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+              <p class="col-10 p-0 m-0 fw-bold">Camera & Photo</p>
+              <div class="svg-container col-2 p-0 m-0">
+                    <svg class="w-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>    
+               </div>
+          </a>
+      </li>
+      <!-- ------------------- -->
+         
+      </ul>
+    </div>
+  </div>
+
+<!-- -----------end offcanvas Shop by Categories---------- -->
+    <ul class="row col-12 position-relative  text-decoration-none fa-list-ul justify-content-start align-items-center list-style-none p-0 m-0">
+
+                <!-- ---------------------- -->
+                <li class="col-2 row p-0 m-0 br-r-1">
+
+
+                <a class="f-size-1 col-12  row justify-content-center align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategories" aria-controls="offcanvasCategories" href="#">
+
+                  <div class="svg-container col-2 p-0 m-0">
+                    <svg class="w-75" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none">
+                      <path d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z" fill="#000000"/>
+                      <path d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z" fill="#000000"/>
+                      <path d="M3 17C2.44772 17 2 17.4477 2 18C2 18.5523 2.44772 19 3 19H21C21.5523 19 22 18.5523 22 18C22 17.4477 21.5523 17 21 17H3Z" fill="#000000"/>
+                      </svg>      </div>
+                  <p class="col-8 p-0 m-0 fw-bold">Shop by Categories</p>
+                </a>
+                </li>
+                <!-- ------------------------- -->
+                <!-- ---------------------- -->
+                  <li class="col-1 row p-0 m-0 homepages-menu">
+                      <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                          <p class="col-10 p-0 m-0 fw-bold">Homepages</p>
+                          <div class="svg-container col-2 p-0 m-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>              </div>
+                      </a>
+                      <div class="container-fluid ">
+                        <ul class="col-12 row position-absolute justify-content-center bg-b-color   start-0   p-1">
+                          <li class="col-3 my-1 position-relative row justify-content-center align-items-end text-center">
+                            <a href="#"><img class="img-fluid" src="images/mega-home-1.jpg" alt=""></a>
+                            <p class="position-absolute my-3 fw-bold">
+                              <a href="#">Supermarket 01</a></p>
+                          </li>
+                          <!-- ------------- -->
+                          <li class="col-3 my-1 position-relative row justify-content-center align-items-end text-center">
+                            <a href="#"><img class="img-fluid" src="images/mega-home-2.jpg" alt=""></a>
+                            <p class="position-absolute my-3 fw-bold">
+                              <a href="#">Supermarket 02</a></p>
+                          </li>
+                          <!-- ------------- -->
+                          <li class="col-3 my-1 position-relative row justify-content-center align-items-end text-center">
+                            <a href="#"><img class="img-fluid" src="images/mega-home-3.jpg" alt=""></a>
+                            <p class="position-absolute my-3 fw-bold">
+                              <a href="#">Furniture</a></p>
+                          </li>
+                          <!-- ------------- -->
+                          <li class="col-3 my-1 position-relative row justify-content-center align-items-end text-center">
+                            <a href="#"><img class="img-fluid" src="images/mega-home-4.jpg" alt=""></a>
+                            <p class="position-absolute my-3 fw-bold">
+                              <a href="#">Electronic</a></p>
+                          </li>
+                          <!-- ------------- -->
+                          <li class="col-3 my-1 position-relative row justify-content-center align-items-end text-center">
+                            <a href="#"><img class="img-fluid" src="images/mega-home-5.jpg" alt=""></a>
+                            <p class="position-absolute my-3 fw-bold">
+                              <a href="#">Cosmetics</a></p>
+                          </li>
+                          <!-- ------------- -->
+                          <li class="col-3 my-1 position-relative row justify-content-center align-items-end text-center">
+                            <a href="#"><img class="img-fluid" src="images/mega-home-6.jpg" alt=""></a>
+                            <p class="position-absolute my-3 fw-bold">
+                              <a href="#">Cosmetics</a></p>
+                          </li>
+                          <!-- ------------- -->
+                          
+                        </ul>
+                      </div>
+                  </li>
+                <!-- ------------------------- -->
+                <!-- ---------------------- -->
+                <li class="col-1 row p-0 m-0">
+                <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                  <p class="col-10 p-0 m-0 fw-bold">
+                    Categories
+                  </p>
+                  <div class="svg-container col-2 p-0 m-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>      </div>
+                </a>
+                </li>
+                <!-- ------------------------- -->
+                <!-- ---------------------- -->
+                <li class="col-1 row p-0 m-0">
+                <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                  <p class="col-10 p-0 m-0 fw-bold">
+                    Products
+                  </p>
+                  <div class="svg-container col-2 p-0 m-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>      </div>
+                </a>
+                </li>
+                <!-- ------------------------- -->
+                <!-- ---------------------- -->
+                <li class="col-1 row p-0 m-0">
+                <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                  <p class="col-10 p-0 m-0 fw-bold">
+                    Pages
+                  </p>
+                  <div class="svg-container col-2 p-0 m-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>      </div>
+                </a>
+                </li>
+                <!-- ------------------------- -->
+                <!-- ---------------------- -->
+                <li class="col-1 row p-0 m-0 fw-bold">
+                <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                  <p class="col-10 p-0 m-0">
+                    About us
+                  </p>
+                  <div class="svg-container col-2 p-0 m-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>      </div>
+                </a>
+                </li>
+                <!-- ------------------------- -->
+                <!-- ---------------------- -->
+                <li class="col-1 row p-0 m-0 fw-bold">
+                <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                  <p class="col-10 p-0 m-0">
+                    Blog
+                  </p>
+                  <div class="svg-container col-2 p-0 m-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>      </div>
+                </a>
+                </li>
+                <!-- ------------------------- -->
+                  <!-- ---------------------- -->
+                <li class="col-2 row p-0 m-0">
+                <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                  <p class="col-8 p-0 m-0 fw-bold">
+                    Best Discount
+                  </p>
+                  <div class="svg-container col-1 p-0 m-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>   
+                        </div>
+                </a>
+                </li>
+
+                <!-- ------------------------- -->
+
+                  <!-- ---------------------- -->
+                  <li class="col-2 row p-0 m-0">
+                  <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                      <p class="col-8 p-0 m-0  ">
+                        Recently viewed
+                      </p>
+                      <div class="svg-container col-1 p-0 m-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>   
+                            </div>
+                    </a>
+                </li>
+    
+    <!-- ------------------------- -->
+    </ul>
+  </div>
+ </section>
+<!-- ------ -------------------section carosel--------------- -->
+ <section>
+  <div class="container-fluid row p-0 m-0  ">
+              <div class="col-8 overflow-hidden    p-0 m-0">
+                <div id="carouselExampleDark" class="carousel  carousel-dark slide">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                      <img src="images/slide1-demo1.jpg" class=" d-block img-fluid" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item bg-g-color" data-bs-interval="2000">
+                      <img src="images/slide2-demo1.jpg" class="d-block img-fluid" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item bg-f-color">
+                      <img src="images/slide3-demo1.png" class="d-block img-fluid" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+      </div>
+      
+      <div class="col-4 p-0 m-0">
+
+        <div class="col-12 overflow-hidden h-50 bg-c-color p-0 m-0">
+          <img class="img-fluid p-0 m-0" src="images/banner1-demo1.jpg">
+        </div>
+        <div class="col-12 overflow-hidden h-50 bg-c-color p-0 m-0">
+          <img class="img-fluid p-0 m-0" src="images/banner2-demo1.jpg">
+        </div>
+
+      </div>
+     
+  </div>
+ </section>
+ <!-- --------section menu delevary--------- -->
+  <section class="container-fluid p-3 ">
+    <div class="row  justify-content-center align-items-center ">
+        <div class="col-11 row">
+                <!-- ---------------- -->
+                <div class="col-3 br-r-1 ">
+                  <div class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                  
+                    <div class="svg-container col-2 p-0 m-0 ">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"   viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                        <g>
+                          <path fill="#808184" d="M10.243,11.992c-3.463-0.443-6.97,0.737-9.439,3.206c-0.128,0.128-0.253,0.26-0.374,0.392   c-0.472,0.519-0.563,1.248-0.233,1.859c0.334,0.618,1.004,0.945,1.703,0.833c2.389-0.383,4.799,0.086,6.857,1.299   c-0.978,1.159-1.669,2.526-1.976,4.012c-0.093,0.45,0.048,0.916,0.379,1.247c0.263,0.264,0.613,0.406,0.972,0.406   c0.091,0,0.184-0.009,0.275-0.028c1.487-0.308,2.854-0.999,4.012-1.976c1.214,2.059,1.681,4.469,1.3,6.857   c-0.112,0.701,0.215,1.37,0.833,1.704C14.794,31.936,15.057,32,15.318,32c0.392,0,0.78-0.146,1.091-0.43   c0.133-0.12,0.263-0.245,0.392-0.373c2.315-2.316,3.608-5.875,3.136-9.388c1.412-0.973,2.749-2.074,3.967-3.292   c4.526-4.527,7.399-10.519,8.087-16.872c0.049-0.445-0.108-0.886-0.43-1.207c-0.321-0.321-0.761-0.475-1.207-0.43   C24.001,0.697,18.009,3.57,13.482,8.097C12.284,9.295,11.202,10.609,10.243,11.992z M30.462,1.003   c0.139-0.02,0.286,0.036,0.392,0.143s0.158,0.249,0.143,0.393c-0.674,6.216-3.371,11.843-7.8,16.272   c-1.068,1.068-2.24,2.03-3.465,2.904c-0.438-1.802-1.365-3.557-2.893-5.085c-0.195-0.195-0.512-0.195-0.707,0s-0.195,0.512,0,0.707   c3.469,3.469,4.403,9.712-0.038,14.152c-0.117,0.117-0.236,0.23-0.357,0.341c-0.304,0.279-0.621,0.143-0.711,0.094   c-0.19-0.103-0.374-0.332-0.321-0.666c0.451-2.824-0.168-5.684-1.744-8.052c-0.009-0.014-0.024-0.021-0.034-0.034   c-0.009-0.011-0.012-0.024-0.022-0.034c-0.012-0.012-0.028-0.017-0.04-0.028c-0.03-0.025-0.06-0.047-0.094-0.065   c-0.023-0.012-0.045-0.021-0.07-0.029c-0.038-0.013-0.075-0.021-0.115-0.024c-0.023-0.002-0.046-0.002-0.069,0   c-0.04,0.002-0.078,0.009-0.117,0.021c-0.025,0.008-0.047,0.018-0.071,0.029c-0.02,0.01-0.042,0.012-0.061,0.025   c-0.016,0.01-0.024,0.026-0.038,0.038c-0.01,0.008-0.023,0.011-0.032,0.021c-1.108,1.071-2.49,1.803-3.995,2.114   c-0.177,0.034-0.293-0.062-0.336-0.106c-0.044-0.044-0.142-0.165-0.106-0.337c0.311-1.504,1.042-2.886,2.114-3.995   c0.013-0.013,0.017-0.03,0.028-0.044c0.008-0.01,0.021-0.015,0.029-0.026c0.011-0.017,0.013-0.036,0.022-0.053   c0.015-0.029,0.027-0.058,0.036-0.089c0.009-0.032,0.014-0.063,0.017-0.096c0.003-0.031,0.003-0.061-0.001-0.093   c-0.003-0.032-0.01-0.062-0.02-0.093c-0.009-0.03-0.021-0.058-0.036-0.087c-0.016-0.029-0.035-0.055-0.056-0.082   c-0.012-0.014-0.017-0.032-0.031-0.045c-0.012-0.011-0.027-0.015-0.039-0.025c-0.012-0.01-0.019-0.023-0.032-0.032   c-2.367-1.574-5.227-2.194-8.05-1.744c-0.336,0.058-0.563-0.13-0.666-0.32c-0.048-0.09-0.185-0.405,0.093-0.711   c0.11-0.121,0.223-0.239,0.34-0.356c2.313-2.314,5.623-3.402,8.863-2.903C10.378,13.004,10.382,13,10.387,13   c0.003,0,0.007,0,0.01,0c0.008,0,0.015,0.003,0.022,0.004c0.056,0.006,0.112,0.008,0.167-0.005   c0.025-0.006,0.047-0.018,0.071-0.027c0.035-0.014,0.07-0.025,0.101-0.047c0.03-0.021,0.052-0.048,0.076-0.075   c0.017-0.019,0.039-0.031,0.054-0.053c0.964-1.424,2.076-2.768,3.302-3.994C18.556,4.437,24.334,1.667,30.462,1.003z"/>
+                          <path fill="#808184" d="M22.14,12.859c0.801,0,1.555-0.312,2.122-0.878c1.169-1.17,1.169-3.073,0-4.243   c-1.134-1.133-3.11-1.133-4.243,0c-1.17,1.17-1.17,3.073,0,4.243C20.585,12.548,21.339,12.859,22.14,12.859z M20.726,8.445   c0.378-0.378,0.88-0.586,1.414-0.586s1.037,0.208,1.415,0.586c0.779,0.78,0.779,2.049,0,2.829c-0.756,0.754-2.074,0.754-2.829,0   C19.946,10.494,19.946,9.226,20.726,8.445z"/>
+                          <path fill="#808184" d="M5.442,25.851l-1.659,1.66c-0.195,0.195-0.195,0.512,0,0.707c0.098,0.098,0.226,0.146,0.354,0.146   s0.256-0.049,0.354-0.146l1.659-1.66c0.195-0.195,0.195-0.512,0-0.707S5.637,25.655,5.442,25.851z"/>
+                          <path fill="#808184" d="M5.438,20.862l-4.152,4.151c-0.195,0.195-0.195,0.512,0,0.707c0.098,0.098,0.226,0.146,0.354,0.146   s0.256-0.049,0.354-0.146l4.152-4.151c0.195-0.195,0.195-0.512,0-0.707S5.633,20.667,5.438,20.862z"/>
+                          <path fill="#808184" d="M6.172,30.606c0.098,0.098,0.226,0.146,0.354,0.146s0.256-0.049,0.354-0.146l4.152-4.151   c0.195-0.195,0.195-0.512,0-0.707s-0.512-0.195-0.707,0l-4.152,4.151C5.977,30.095,5.977,30.411,6.172,30.606z"/>
+                        </g>
+                        </svg>
+                    </div>
+                    <div class="col-10">
+                        <p class="col-10 p-0 m-0 fw-bold">
+                          
+                            Fast, Free Shipping 
+                        </p>
+                        <p class="col-10 p-0 m-0 fw-normal d-color">
+                          On order over $50
+                        </p>
+                      </div>
+                  </div>
+                </div>
+                <!-- ---------------- -->
+                <div class="col-3 br-r-1 ">
+                  <div class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                  
+                    <div class="svg-container col-2 p-0 m-0 ">
+                      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" fill="none" stroke="#000000"><circle cx="32" cy="32" r="24"/><polyline points="40 44 32 32 32 16"/></svg>
+                    </div>
+                    <div class="col-10">
+                        <p class="col-10 p-0 m-0 fw-bold">
+                          
+                          Next Day Delivery
+
+                        </p>
+                        <p class="col-10 p-0 m-0  fw-normal d-color">
+                          Free– spend over $99
+                        </p>
+                      </div>
+                  </div>
+                </div>
+                <!-- ---------------- -->
+                <div class="col-3 br-r-1 ">
+                  <div class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                  
+                    <div class="svg-container col-2 p-0 m-0 ">
+                      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" fill="none" stroke="#000000"><circle cx="16" cy="16" r="8"/><circle cx="48" cy="48" r="8"/><line x1="48" y1="8" x2="16" y2="56"/></svg>
+                    </div>
+                    <div class="col-10">
+                        <p class="col-10 p-0 m-0 fw-bold">
+                          Low Price Guarantee
+                        </p>
+                        <p class="col-10 p-0 m-0  fw-normal d-color">
+                          We offer competitive prices
+                        </p>
+                      </div>
+                  </div>
+                </div>
+                <!-- ---------------- -->
+                <div class="col-3   ">
+                  <div class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
+                  
+                    <div class="svg-container col-2 p-0 m-0 ">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"   viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                        <g>
+                          <path fill="#808184" d="M28.779,13.903l-6.535-1.167c-0.72-0.129-1.24-0.753-1.237-1.483L21.04,3.4c0-0.988-0.37-1.876-1.042-2.5   c-0.702-0.651-1.668-0.966-2.738-0.889C15.432,0.148,14,1.726,14,3.603v2.202c0,1.123-0.407,2.206-1.146,3.051l-1.37,1.564   C10.604,11.424,9.334,12,8,12c-0.276,0-0.5,0.224-0.5,0.5S7.724,13,8,13c1.623,0,3.167-0.7,4.236-1.922l1.371-1.564   C14.505,8.487,15,7.17,15,5.805V3.603c0-1.356,1.025-2.496,2.334-2.593c0.786-0.062,1.488,0.163,1.984,0.623   c0.472,0.438,0.722,1.05,0.722,1.766l-0.033,7.851c-0.005,1.217,0.861,2.257,2.061,2.472l6.535,1.167   c0.72,0.13,1.361,0.558,1.759,1.173c0.393,0.607,0.514,1.321,0.343,2.013l-2.701,10.954C27.714,30.188,26.685,31,25.5,31h-7.872   l-7.168-1.981C10.417,29.006,10.372,29,10.327,29H8c-0.276,0-0.5,0.224-0.5,0.5S7.724,30,8,30h2.259l7.168,1.981   C17.471,31.994,17.516,32,17.561,32H25.5c1.646,0,3.074-1.123,3.474-2.732l2.701-10.954c0.239-0.962,0.07-1.955-0.474-2.796   C30.653,14.671,29.771,14.082,28.779,13.903z"/>
+                          <path fill="#808184" d="M2.5,11C1.122,11,0,12.121,0,13.5v16C0,30.879,1.122,32,2.5,32S5,30.879,5,29.5v-16   C5,12.121,3.878,11,2.5,11z M4,29.5C4,30.327,3.327,31,2.5,31S1,30.327,1,29.5v-16C1,12.673,1.673,12,2.5,12S4,12.673,4,13.5V29.5z   "/>
+                        </g>
+                        </svg>
+                    </div>
+                    <div class="col-10">
+                        <p class="col-10 p-0 m-0 fw-bold">
+                          Quality Guarantee
+                        </p>
+                        <p class="col-10 p-0 m-0  fw-normal d-color">
+                          We Guarantee Our Products
+                        </p>
+                      </div>
+                  </div>
+                </div>
+                <!-- ---------------- -->
+       </div>
+    </div>
+  </section>
+   <!-- --------section circel product --------- -->
+   <section class="container-fluid p-3 ">
+    <div class="row justify-content-center align-items-center ">
+      <!-- ---------------- -->
+       <ul class="row col-11 flex-nowrap justify-content-center align-items-center list-style-none  overflow-x-auto">
+        <li class="col-2">
+            <a href="#" class="row justify-content-center align-items-center text-center">
+              <img class="img-fluid rounded-circle" src="images/cat-1.jpg" alt="">
+              <p>Smartphone</p>
+            </a>
+        </li>
+        <!-- ------------------ -->
+        <li class="col-2">
+          <a href="#" class="row justify-content-center align-items-center text-center">
+            <img class="img-fluid rounded-circle" src="images/cat-2.jpg" alt="">
+            <p>Home & Decor</p>
+          </a>
+      </li>
+      <!-- ------------------ -->
+      <li class="col-2">
+        <a href="#" class="row justify-content-center align-items-center text-center">
+          <img class="img-fluid rounded-circle" src="images/cat-8.jpg" alt="">
+          <p>Smartphone</p>
+        </a>
+    </li>
+    <!-- ------------------ -->
+    <li class="col-2">
+      <a href="#" class="row justify-content-center align-items-center text-center">
+        <img class="img-fluid rounded-circle" src="images/cat-4.jpg" alt="">
+        <p>Smartphone</p>
+      </a>
+  </li>
+  <!-- ------------------ -->
+  <li class="col-2">
+    <a href="#" class="row justify-content-center align-items-center text-center">
+      <img class="img-fluid rounded-circle" src="images/cat-5.jpg" alt="">
+      <p>Smartphone</p>
+    </a>
+</li>
+<!-- ------------------ -->
+<li class="col-2">
+  <a href="#" class="row justify-content-center align-items-center text-center">
+    <img class="img-fluid rounded-circle" src="images/cat-6.jpg" alt="">
+    <p>Smartphone</p>
+  </a>
+</li>
+<!-- ------------------ -->
+<li class="col-2">
+  <a href="#" class="row justify-content-center align-items-center text-center">
+    <img class="img-fluid rounded-circle" src="images/cat-7.jpg" alt="">
+    <p>Smartphone</p>
+  </a>
+</li>
+<!-- ------------------ -->
+<li class="col-2">
+  <a href="#" class="row justify-content-center align-items-center text-center">
+    <img class="img-fluid rounded-circle" src="images/cat-8.jpg" alt="">
+    <p>Smartphone</p>
+  </a>
+</li>
+<!-- ------------------ -->
+       </ul>
+      <!-- ---------------- -->
+
+    </div>
+  </section>
+     <!-- --------section copouns --------- -->
+     <section class="container-fluid p-3 ">
+      <div class="row justify-content-center align-items-center ">
+        <!-- ---------------- -->
+         <div class="row col-11 flex-nowrap justify-content-center align-items-center br-all-1">
+            <h4 class="text-center col-12  p-1    ">
+               <span class=" p-0 m-0 ">Super discount for your</span>
+                <span class=" p-0 m-0 fw-bold">first purchase</span>
+                
+               <span class=" p-0 m-0 fw-bold a-color my-1">COUPON25</span> 
+               <span class=" p-0 m-0 ">Use discount code in the checkout!</span> 
+            </h4>
+         </div>
+        <!-- ---------------- -->
+  
+      </div>
+    </section>
 
     
 
