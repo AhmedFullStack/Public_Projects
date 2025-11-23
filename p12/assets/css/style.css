@@ -13,6 +13,7 @@
     --h-color:#686F82;
     --j-color:#F0F1EC;
     --k-color:#F19DA1;
+    --l-color:#1B1F22;
     --fff-color:#FFFFFF;
     
 
@@ -51,7 +52,7 @@
 .h-20{height:20% !important;}
 .h-10{height:10% !important;}
  
-.min-h1{min-height: 1vw!important;}
+.b1{min-height: 1vw!important;}
 .min-h2{min-height: 2vw!important;}
 .min-h3{min-height: 3vw!important;}
 .min-h4{min-height: 4vw!important;}
@@ -63,26 +64,36 @@
 .min-h40{min-height: 40vw!important;}
 .min-h50{min-height: 50vw!important;}
 
+.max-h10{max-height: 10vw!important;}
+.max-h20{max-height: 20vw!important;}
+.max-h25{max-height: 25vw!important;}
+.max-h40{max-height: 40vw!important;}
+.max-h50{max-height: 50vw!important;}
+
+
+
   /* ثانياً: طريقة WebKit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-    width: 1rem;
+    width: 0;
   }
   
 ::-webkit-scrollbar-track {
-    background: var(--b-color);
+    /* background: var(--b-color); */
   }
   
 ::-webkit-scrollbar-thumb {
-    background-color: var(--b-color);
-    border-radius: 10px;
+    /* background-color: var(--b-color);
+    border-radius: 10px; */
     /* border: 2px solid var(--a-color); */
      /* لإضافة إطار بسيط حول المقبض */
  
   }
   /* تغيير لون التحديد ليكون متناسقاً مع موقعك */
   ::selection {
-    background-color: var(--b-color); /* نفس اللون العنابي */
-    color: var(--a-color); /* لون النص المحدد */
+    background-color: var(--b-color);
+     /* نفس اللون العنابي */
+    color: var(--a-color); 
+    /* لون النص المحدد */
   }
   
   /* لمتصفح فايرفوكس */
@@ -100,7 +111,7 @@ body{
     font-style: var(--A-font-style);
     font-size: var(--A-font-size);
 }
-*:hover{ outline: 1px dotted red;}
+/* *:hover{ outline: 1px dotted red;} */
 *{transition: all 0.3s !important;}
 * a{text-decoration:none !important; color: var(--c-color) ;}
 * a:link:hover{color: var(--a-color) !important; transition: all 0.5s !important;}
@@ -126,6 +137,17 @@ body{
   }
 
 /* -------generic class--------- */
+
+ /* ------------------------ */
+/* أو لعنصر معين فقط  chrome ..*/
+*ul::-webkit-scrollbar {
+  display: none;
+}
+*ul {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* ------------------ */
 .over-flow-hidden{overflow:hidden !important;}
 
 .top-0{top:0 !important;}
@@ -135,6 +157,12 @@ body{
 
 .bottom-0{bottom:0 !important;}
 .bottom-10{bottom:10% !important;}
+.bottom-20{bottom:20% !important;}
+.bottom-30{bottom:30% !important;}
+.bottom-40{bottom:40% !important;}
+.bottom-50{bottom:50% !important;}
+.bottom-60{bottom:60% !important;}
+.bottom-70{bottom:70% !important;}
 
 .left-0{left:0 !important;}
 .left-10{left:10% !important;}
@@ -159,6 +187,7 @@ body{
 .h-color{color:var(--h-color) !important;}
 .j-color{color:var(--j-color) !important;}
 .k-color{color:var(--k-color) !important;}
+.l-color{color:var(--l-color) !important;}
 .fff-color{color:var(--fff-color) !important;}
 
 /* background-colors class */
@@ -174,6 +203,7 @@ body{
 .bg-h-color{background-color:var(--h-color) !important;}
 .bg-j-color{background-color:var(--j-color) !important;}
 .bg-k-color{background-color:var(--k-color) !important;}
+.bg-l-color{background-color:var(--l-color) !important;}
 .bg-fff-color{background-color:var(--fff-color) !important;}
 
 
@@ -181,6 +211,9 @@ body{
 /* size */
 .as1-1{aspect-ratio: 1/1 !important;}
 .t-scale-2{transform: scale(2);}
+
+.scaleX1{ transition: all 0.3; z-index: 10;}
+.scaleX1:hover{transform: scale(1.1);transition: all 0.3s !important;}
 .transition-all-03{transition: all 0.3s !important;}
 
 /* borders */
@@ -198,11 +231,14 @@ body{
 .br-rl-1{border-right: 1px solid var(--d-color);border-left: 1px solid var(--d-color);}
 /* outline */
 .outline-none{outline:none;}
+.outline-1{outline: 1px solid var(--d-color);}
 .outline-offset-2{outline-offset: 2%;}
 
 /* font */
 .f-size{font-size: 0.5vw;}
  .f-size-1{font-size: 1vw;}
+ .f-size-2{font-size: 2vw;}
+ .f-size-3{font-size: 3vw;}
 
  .list-style-none{list-style-type: none;}
  
@@ -346,7 +382,7 @@ body{
   
 }
 .newCollection div{overflow: hidden!important;}
-.newCollection img:hover{
+.newCollection div:hover>img{
   transition: all ease-in-out 0.3s ;
   transform:scale(1.2);
   scroll-behavior: smooth;
@@ -438,15 +474,14 @@ newCollection p{
 
 /* ---------end-new-arrivals-products-------- */
 
-#draggable-list {
+.draggable-list {
   cursor: grab; /* يُظهر مؤشر اليد للسحب */
   /* خصائص أخرى للعرض الأفقي: */
-  display: flex;
-  padding: 10px;
-  white-space: nowrap;
+ 
+ 
 }
 
-#draggable-list:active {
+.draggable-list::marker {
   cursor: grabbing; /* يُظهر مؤشر الإمساك أثناء السحب */
 }
 #hoodieOffer{    right: 20%;
@@ -475,3 +510,6 @@ newCollection p{
   }
   
 }
+
+/* ------------------------- */
+/* تحسين تنسيق الصور */
