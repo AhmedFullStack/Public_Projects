@@ -449,3 +449,29 @@ newCollection p{
 #draggable-list:active {
   cursor: grabbing; /* يُظهر مؤشر الإمساك أثناء السحب */
 }
+#hoodieOffer{    right: 20%;
+  top: 25%;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  margin: 0% auto;
+  padding: 4% 0;
+  animation-name: hoodieOfferAnim;
+  animation-duration: 3s;
+  animation-fill-mode: initial;
+  animation-iteration-count: infinite;
+}
+@keyframes hoodieOfferAnim {
+  0% {
+    transform: scale(0.7);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 1;
+  }
+  
+}
