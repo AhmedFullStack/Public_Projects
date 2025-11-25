@@ -24,11 +24,37 @@
  
    
 }
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* يضمن تغطية الشريحة بالكامل */
-}
+/* filters classes */
+.blur{filter: blur(1rem) !important;}
+.blur-1{filter: blur(1px) !important;}
+.blur-2{filter: blur(2px) !important;}
+.blur-3{filter: blur(3px) !important;}
+.blur-4{filter: blur(4px) !important;}
+.blur-5{filter: blur(5px) !important;}
+
+
+.carousel {
+  max-width: 100%; /* ضبط العرض الأقصى للحاوية */
+  max-height: 500px;
+     /* ضبط الارتفاع الثابت */
+  }
+  .carousel-inner{
+    height: 100%;
+  
+  }
+  .carousel-item {
+    height: 100%;
+    overflow: hidden;
+  
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    object-fit:fill;
+    /* للحفاظ على نسب الصورة */
+  }
+/* ------------------- */
+ 
 /* ----------width----------- */
 .w-100{width:100% !important;}
 .w-90{width:90% !important;}
@@ -111,7 +137,7 @@ body{
     font-style: var(--A-font-style);
     font-size: var(--A-font-size);
 }
-*:hover{ outline: 1px dotted red;}
+/* *:hover{ outline: 1px dotted red;} */
 *{transition: all 0.3s !important;}
 * a{text-decoration:none !important; color: var(--c-color) ;}
 * a:link:hover{color: var(--a-color) !important; transition: all 0.5s !important;}
@@ -276,25 +302,7 @@ body{
 .usd-menu > ul:hover  { display:block;  background: #fff; transition: all 0.3s; margin:0 2%;} 
 
 
-.carousel {
-max-width: 100%;
-   /* ضبط الارتفاع الثابت */
-}
-.carousel-inner{
-  height: 100%;
 
-}
-.carousel-item {
-  height: 100%;
-  overflow: hidden;
-
-}
-
-.carousel-item img {
-  height: 100%;
-  object-fit:fill;
-  /* للحفاظ على نسب الصورة */
-}
 
 .flash-deals:hover{
   box-shadow: 1px 1px 10px var(--d-color);
