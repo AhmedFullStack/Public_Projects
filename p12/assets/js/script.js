@@ -134,7 +134,66 @@ slider.addEventListener('mousemove', (e) => {
     slider.scrollLeft = scrollLeft - walk; 
 });
 }
+// ----------Mycarosel-------------
 
+function Mycarosel(){
+     // JavaScript للتحكم في الكاروسيل
+    // 1. تحديد العناصر الأساسية من الـ DOM
+const slidesWrapper = document.querySelector('.slides-wrapper');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+// 2. المتغيرات الرئيسية
+let currentSlideIndex = 0; // يبدأ من الشريحة الأولى (الفهرس 0)
+const totalSlides = slides.length; // عدد الشرائح هو 3
+
+// 3. الوظيفة الأساسية لتحديث الشريحة
+function updateCarousel() {
+    // لحساب مقدار الإزاحة: (الفهرس الحالي) * (عرض شريحة واحدة)
+    // بما أننا نعمل في وضع RTL (من اليمين لليسار)، نستخدم transform: translateX
+    
+    // ملاحظة: كل شريحة عرضها 100% من الحاوية الأم
+    const offset = currentSlideIndex * 100; 
+
+    // تطبيق الإزاحة (النقل الأفقي) على حاوية الشرائح
+    // إذا كانت الشريحة 0: تتحرك 0% (تبقى مكانها)
+    // إذا كانت الشريحة 1: تتحرك 100% (تظهر الشريحة الثانية)
+    // إذا كانت الشريحة 2: تتحرك 200% (تظهر الشريحة الثالثة)
+    slidesWrapper.style.transform = `translateX(-${offset}%)`;
+}
+
+// 4. وظائف أزرار التنقل
+function showNextSlide() {
+    // زيادة الفهرس، وإذا وصل للنهاية، يعود إلى 0 (التفاف)
+    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+    updateCarousel();
+}
+
+function showPrevSlide() {
+    // إنقاص الفهرس، وإذا وصل لأقل من 0، يعود إلى الشريحة الأخيرة (التفاف)
+    currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+}
+
+// 5. ربط الوظائف بأحداث النقر
+nextBtn.addEventListener('click', showNextSlide);
+prevBtn.addEventListener('click', showPrevSlide);
+
+// 6. تشغيل التنقل التلقائي (اختياري)
+// const intervalTime = 3000; // 3 ثوانٍ
+// let carouselInterval = setInterval(showNextSlide, intervalTime);
+
+// يمكنك إيقاف التنقل التلقائي عند تمرير الماوس
+// slidesWrapper.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+// slidesWrapper.addEventListener('mouseleave', () => {
+//     carouselInterval = setInterval(showNextSlide, intervalTime);
+// });
+
+// التأكد من أن الكاروسيل يبدأ من الشريحة الأولى
+updateCarousel();
+}
+Mycarosel();
 // مثال: تشغيل العداد لمدة ساعتين (2 * 60 * 60 = 7200 ثانية)
 // يمكنك تغيير الرقم 7200 لأي عدد ثواني تريده
 startOfferCountdown(7200);
