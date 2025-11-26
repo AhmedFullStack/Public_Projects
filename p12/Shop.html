@@ -26,72 +26,78 @@
   <!-- first nav -->
   <section class="d-lg-none d-md-block d-sm-none d-none ">
 
+    <div class="row  justify-content-between align-items-center">
     <div class="container-fluid bg-black">
-      <div class="row  justify-content-between align-items-center">
-          <div class=" col-6 row">
-             <!-- -----lang--- -->
-                     <div class=" col-5 p-3">
-                        <a class="w-100  text-decoration-none text-light " type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                                <img  src="images/english.png" alt=""> 
-                                              English 
-                                                <i class="fa-solid fa-chevron-down"></i>
-                           </a>
-                                          
-                                          
-                                          <ul class="dropdown-menu">
-                                            <li>
-                                              <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#"> 
-                                                  <img class="w-30" src="images/francais.png" alt=""> 
-                                                  Français
-                                              </a>
-                                            </li>
-                                            <li>
-                                              <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#">
-                                                  <img class="w-30" src="images/portugues.png" alt=""> 
-                                                  Português
-                                              </a>
-                                            </li>
-                                            
-                                          </ul>
-                     </div>
-               <!-- -----usd--- -->
-                     <div class=" col-5 p-3">
-                      <a class="text-decoration-none text-light" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                         
-                              USD
-                              <i class="fa-solid fa-chevron-down"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#"> 
-                            
-                              EUR
-                          </a>
-                        </li>
-                        <li>
-                          <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#">
-                             
-                              BRL
-                          </a>
-                        </li>
-                        
-                      </ul>
-                     </div>
-           </div>
+        <div class="row">
+                    <div class="col-6">
+                      <div class="row justify-content-evenly align-items-center">
+                      <!-- -----lang--- -->
+                              <div class="col-5 p-3 position-relative">
+                                  <a class="w-100  text-decoration-none text-light "  data-bs-toggle="dropdown" aria-expanded="true">
+                                          <img  src="images/english.png" alt=""> 
+                                                        English 
+                                                          <i class="fa-solid fa-chevron-down"></i>
+                                    </a>
+                                                    
+                                                    
+                                                    <ul class="dropdown-menu position-absolute">
+                                                      <li>
+                                                        <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#"> 
+                                                            <img class="w-30" src="images/francais.png" alt=""> 
+                                                            Français
+                                                        </a>
+                                                      </li>
+                                                      <li>
+                                                        <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#">
+                                                            <img class="w-30" src="images/portugues.png" alt=""> 
+                                                            Português
+                                                        </a>
+                                                      </li>
+                                                      
+                                                    </ul>
+                              </div>
+                        <!-- -----usd--- -->
+                              <div class=" col-5 p-3 position-relative">
+                                <a class="text-decoration-none text-light"  data-bs-toggle="dropdown" aria-expanded="true">
+                                  
+                                        USD
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu position-absolute">
+                                  <li>
+                                    <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#"> 
+                                      
+                                        EUR
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class=" text-decoration-none w-auto p-3 dropdown-item" href="#">
+                                      
+                                        BRL
+                                    </a>
+                                  </li>
+                                  
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+         
 
               <!-- ----- Contact us-------- -->
-                     <div class=" col-6 col p-3">
-                  <i class="fa-solid fa-phone text-light"></i>
-                  <a class=" col-7 text-decoration-none text-light " href="#">
-                  
-                   Contact us 24/7
-                  (+92) 3942 7879
-                   
-                  </a>
-                     </div>
+                  <div class="col-6 p-3">
+                    <div class="row justify-content-start align-items-center">
+                          <i class="col-1 p-0 m-0 fa-solid fa-phone text-light"></i>
+                          <a class="col-10 p-0 m-0 text-decoration-none text-light " href="#">
+                          
+                          Contact us 24/7
+                          (+92) 3942 7879
+                          
+                          </a>
+                        </div>
+                  </div>
 
     </div>
-
+  </div>
   </section>
 <!-- ----------------section main-navbar---------------- -->
   <section>
@@ -443,7 +449,7 @@
   </div>
 
 <!-- -----------end offcanvas Shop by Categories---------- -->
-    <ul class="row col-12 position-relative  text-decoration-none fa-list-ul justify-content-start align-items-center list-style-none p-0 m-0">
+    <ul class="row col-12 position-relative d-none d-sm-none d-md-flex d-lg-fd-md-flex d-xl-fd-md-flex text-decoration-none fa-list-ul justify-content-start align-items-center list-style-none p-0 m-0">
 
                 <!-- ---------------------- -->
                 <li class="col-2 row p-0 m-0 br-r-1">
@@ -462,7 +468,7 @@
                 </li>
                 <!-- ------------------------- -->
                 <!-- ---------------------- -->
-                  <li class="col-1 row p-0 m-0 homepages-menu">
+                  <li class="col-1 row p-0 m-0 homepages-menu ">
                       <a class="f-size-1 col-12 p-2 m-0 row justify-content-center align-items-center" href="#">
                           <p class="col-10 p-0 m-0 fw-bold">Homepages</p>
                           <div class="svg-container col-2 p-0 m-0">
