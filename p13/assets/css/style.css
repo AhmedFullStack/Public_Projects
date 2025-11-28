@@ -1,0 +1,411 @@
+@font-face {
+  font-family: "Poppins"; ;
+  src: url(assets/fonts/Poppins/Poppins-Medium.ttf) format("truetype");
+}
+ 
+:root{
+    /* ------colors----------- */
+    
+    --a-color:#088178;
+    --b-color:#D9F4E2;
+    --c-color:#39B4AC;
+    --d-color:#bbbbbb;
+
+    --e-color:#FFA50F;
+    --f-color:#FF0000;
+    --g-color:#D2AF91;
+
+    --h-color:#686F82;
+    --j-color:#F0F1EC;
+    --k-color:#F19DA1;
+    --l-color:#1B1F22;
+    --fff-color:#FFFFFF;
+    
+
+    --A-font-family: "Poppins", sans-serif;
+    --A-font-weight: 400;
+    --A-font-style: normal;
+    --A-font-size:0.9rem;
+ 
+   
+}
+/* ------------------ */
+.over-flow-hidden{overflow:hidden !important;}
+
+.top-0{top:0 !important;}
+.top-10{top:10% !important;}
+.top-20{top:20% !important;}
+.top-30{top:30% !important;}
+
+.bottom-0{bottom:0 !important;}
+.bottom-10{bottom:10% !important;}
+.bottom-20{bottom:20% !important;}
+.bottom-30{bottom:30% !important;}
+.bottom-40{bottom:40% !important;}
+.bottom-50{bottom:50% !important;}
+.bottom-60{bottom:60% !important;}
+.bottom-70{bottom:70% !important;}
+
+.left-0{left:0 !important;}
+.left-10{left:10% !important;}
+.left-20{left:20% !important;}
+.left-30{left:30% !important;}
+
+
+.right-0{right:0 !important;}
+.right-10{right:10% !important;}
+.right-15{right:15% !important;}
+
+/* colors class */
+.a-color{color:var(--a-color) !important;}
+.b-color{color:var(--b-color) !important;}
+.c-color{color:var(--c-color) !important;}
+.d-color{color:var(--d-color) !important;}
+
+.e-color{color:var(--e-color) !important;}
+.f-color{color:var(--f-color) !important;}
+.g-color{color:var(--g-color) !important;}
+
+.h-color{color:var(--h-color) !important;}
+.j-color{color:var(--j-color) !important;}
+.k-color{color:var(--k-color) !important;}
+.l-color{color:var(--l-color) !important;}
+.fff-color{color:var(--fff-color) !important;}
+
+/* background-colors class */
+.bg-a-color{background-color:var(--a-color) !important;}
+.bg-b-color{background-color:var(--b-color) !important;}
+.bg-c-color{background-color:var(--c-color) !important;}
+.bg-d-color{background-color:var(--d-color) !important;}
+
+.bg-e-color{background-color:var(--e-color) !important;}
+.bg-f-color{background-color:var(--f-color) !important;}
+.bg-g-color{background-color:var(--g-color) !important;}
+
+.bg-h-color{background-color:var(--h-color) !important;}
+.bg-j-color{background-color:var(--j-color) !important;}
+.bg-k-color{background-color:var(--k-color) !important;}
+.bg-l-color{background-color:var(--l-color) !important;}
+.bg-fff-color{background-color:var(--fff-color) !important;}
+
+
+/* filters classes */
+.blur{filter: blur(1rem) !important;}
+.blur-1{filter: blur(1px) !important;}
+.blur-2{filter: blur(2px) !important;}
+.blur-3{filter: blur(3px) !important;}
+.blur-4{filter: blur(4px) !important;}
+.blur-5{filter: blur(5px) !important;}
+
+/* ----------width----------- */
+.w-100{width:100% !important;}
+.w-90{width:90% !important;}
+.w-80{width:80% !important;}
+.w-70{width:70% !important;}
+.w-60{width:60% !important;}
+.w-50{width:50% !important;}
+.w-40{width:40% !important;}
+.w-30{width:30% !important;}
+.w-20{width:20% !important;}
+.w-10{width:10% !important;}
+/* ---------height---------- */
+.h-100{height:100% !important;}
+.h-90{height:90% !important;}
+.h-80{height:80% !important;}
+.h-70{height:70% !important;}
+.h-60{height:60% !important;}
+.h-50{height:50% !important;}
+.h-40{height:40% !important;}
+.h-30{height:30% !important;}
+.h-20{height:20% !important;}
+.h-10{height:10% !important;}
+ 
+.b1{min-height: 1vw!important;}
+.min-h2{min-height: 2vw!important;}
+.min-h3{min-height: 3vw!important;}
+.min-h4{min-height: 4vw!important;}
+.min-h5{min-height: 5vw!important;}
+
+.min-h10{min-height: 10vw!important;}
+.min-h20{min-height: 20vw!important;}
+.min-h25{min-height: 25vw!important;}
+.min-h40{min-height: 40vw!important;}
+.min-h50{min-height: 50vw!important;}
+
+.max-h10{max-height: 10vw!important;}
+.max-h20{max-height: 20vw!important;}
+.max-h25{max-height: 25vw!important;}
+.max-h40{max-height: 40vw!important;}
+.max-h50{max-height: 50vw!important;}
+.carousel {
+  max-width: 100%; /* ضبط العرض الأقصى للحاوية */
+  max-height: 500px;
+     /* ضبط الارتفاع الثابت */
+  }
+  .carousel-inner{
+    height: 100%;
+  
+  }
+  .carousel-item {
+    height: 100%;
+    overflow: hidden;
+  
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    object-fit:fill;
+    /* للحفاظ على نسب الصورة */
+  }
+/* ------------------- */
+ 
+
+
+
+
+  /* ثانياً: طريقة WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+::-webkit-scrollbar-track {
+    /* background: var(--b-color); */
+  }
+  
+::-webkit-scrollbar-thumb {
+    /* background-color: var(--b-color);
+    border-radius: 10px; */
+    /* border: 2px solid var(--a-color); */
+     /* لإضافة إطار بسيط حول المقبض */
+ 
+  }
+  /* تغيير لون التحديد ليكون متناسقاً مع موقعك */
+  ::selection {
+    background-color: var(--b-color);
+     /* نفس اللون العنابي */
+    color: var(--a-color); 
+    /* لون النص المحدد */
+  }
+  
+  /* لمتصفح فايرفوكس */
+  ::-moz-selection {
+    background-color: var(--a-color);
+    color: var(--b-color);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+body{
+    padding: 0; margin:0;box-sizing: border-box;
+    font-family: var(--A-font-family);
+    font-weight: var(--A-font-weight);
+    font-style: var(--A-font-style);
+    font-size: var(--A-font-size);
+}
+*:hover{ outline: 1px dotted red;}
+*{transition: all 0.3s !important;}
+* a{text-decoration:none !important; color: var(--c-color) ;}
+* a:link:hover{color: var(--a-color) !important; transition: all 0.5s !important;}
+*li:hover > a:link{color: var(--a-color) !important; transition: all 0.5s !important;}
+*li:hover > span,i,svg{color: var(--a-color) !important; transition: all 0.5s !important;}
+ /* -------------svg--------- */
+ .svg-container svg{
+  width: 100%!important;
+    max-width: 100% !important;
+ }
+.svg-container:hover svg path {
+    stroke: var(--a-color)!important;
+    fill:var(--a-color)!important;
+    transition: all 0.5s !important;
+    
+
+  }
+  .svg-container:hover svg  circle {
+    stroke: var(--a-color)!important;
+    fill:var(--a-color)!important;
+    transition: all 0.5s !important;
+ 
+
+  }
+
+/* -------generic class--------- */
+
+ /* ------------------------ */
+/* أو لعنصر معين فقط  chrome ..*/
+*ul::-webkit-scrollbar {
+  display: none;
+}
+*ul {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
+/* size */
+.as1-1{aspect-ratio: 1/1 !important;}
+.t-scale-2{transform: scale(2);}
+
+.scaleX1{ transition: all 0.3; z-index: 10;}
+.scaleX1:hover{transform: scale(1.1);transition: all 0.3s !important;}
+.transition-all-03{transition: all 0.3s !important;}
+
+/* borders */
+.br-none{border:none !important;}
+.br-20{border-radius: 20px !important;}
+.br-10{border-radius: 10px !important;}
+.br-5{border-radius: 5px !important;}
+
+.br-all-1{border: 1px solid var(--d-color);}
+.br-t-1{border-top: 1px solid var(--d-color);}
+.br-m-1{border-bottom: 1px solid var(--c-color);}
+.br-m-2{border-bottom: 2px solid var(--c-color);}
+.br-m-3{border-bottom: 3px solid var(--c-color);}
+.br-r-1{border-right: 1px solid var(--h-color);}
+.br-l-1{border-left: 1px solid var(--h-color);}
+.br-tm-1{border-top: 1px solid var(--d-color)!important;border-bottom: 1px solid var(--d-color)!important;}
+.br-rl-1{border-right: 1px solid var(--d-color);border-left: 1px solid var(--d-color);}
+
+
+/* borders h-color */
+.br-none-h{border:none !important;}
+.br-20-h{border-radius: 20px !important;}
+.br-10-h{border-radius: 10px !important;}
+.br-5-h{border-radius: 5px !important;}
+
+.br-all-1-h{border: 1px solid var(--h-color);}
+.br-t-1-h{border-top: 1px solid var(--h-color);}
+.br-m-1-h{border-bottom: 1px solid var(--h-color);}
+.br-m-2-h{border-bottom: 2px solid var(--h-color);}
+.br-m-3-h{border-bottom: 3px solid var(--h-color);}
+.br-r-1-h{border-right: 1px solid var(--h-color);}
+.br-l-1-h{border-left: 1px solid var(--h-color);}
+.br-tm-1-h{border-top: 1px solid var(--h-color)!important;border-bottom: 1px solid var(--h-color)!important;}
+.br-rl-1-h{border-right: 1px solid var(--h-color);border-left: 1px solid var(--h-color);}
+
+
+/* outline */
+.outline-none{outline:none;}
+.outline-1{outline: 1px solid var(--d-color);}
+.outline-offset-2{outline-offset: 2%;}
+
+/* font */
+.f-size{font-size: 0.5vw;}
+ .f-size-1{font-size: 1vw;}
+ .f-size-2{font-size: 2vw;}
+ .f-size-3{font-size: 3vw;}
+
+ .list-style-none{list-style-type: none;}
+ 
+
+
+
+
+  /* 1. تنسيق الرابط الأساسي */
+  .cool-link {
+    text-decoration: none; /* إزالة الخط الافتراضي */
+    color: var(--c-color); /* لون النص الأساسي */
+    font-size: var(--A-font-size);
+    position: relative; /* ضروري لضبط مكان الخط بالنسبة للرابط */
+    padding-bottom: 5px;
+  }
+
+  /* 2. إنشاء الخط الوهمي (مخفي حالياً لأن العرض 0) */
+  .cool-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;      /* وضعه في أسفل الرابط */
+    height: 2px;    /* سُمك الخط */
+    width: 0%;      /* البداية: العرض صفر */
+    background-color: var(--a-color); /* اللون الأحمر */
+    
+    /* السر هنا: التحول يستغرق 2 ثانية وبشكل ناعم */
+    transition: width 0.5s ease-in-out; 
+  }
+
+  /* 3. عند مرور الفأرة (Hover) */
+  .cool-link:hover::after {
+    width: 100%; /* النهاية: العرض كامل */
+    
+  }
+/* ---------------------- */
+
+
+#timer_offer{
+  font-family: monospace;
+   font-size: 2rem;
+    font-weight: bold;
+     color: var(--c-color);
+     span{
+      padding: 4px;
+     }
+   
+}
+ /* --------scrollToYButton---------- */
+#scrollToYButton{
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--c-color);
+  color: var(--b-color);
+  border:none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px var(--d-color);
+  z-index: 1000;
+}
+
+/* ---------end-new-arrivals-products-------- */
+
+.draggable-list {
+  cursor: grab; /* يُظهر مؤشر اليد للسحب */
+  /* خصائص أخرى للعرض الأفقي: */
+ 
+ 
+}
+
+.draggable-list::marker {
+  cursor: grabbing; /* يُظهر مؤشر الإمساك أثناء السحب */
+}
+
+
+/* project classes */
+.login-div:hover .login-menu{
+  display: block;
+  z-index: 1000;
+
+}
+.login-menu{
+  background:#ffffff;
+  display: none;
+  li a{margin: 3px;color:var(--h-color);}
+  li:hover{
+    right: 2%;
+    transform: scaleX(1.1);
+    transition: all 0.3s !important;
+  }
+  li:hover a{
+    color:var(--a-color);
+  }
+}
+
+.Free-Shipping::after{
+  display: none;
+}
+.Free-Shipping:hover::after {
+  display: block;
+  content: 'enjoy free shipping on orders more than 1399LE 😉';
+  border: 1px solid var(--a-color);
+  position: absolute;
+  border-radius: 10px;
+  top: 23%;
+  padding: 2px;
+  background: var(--b-color);
+  z-index: 1000;  
+}
