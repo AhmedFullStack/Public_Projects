@@ -486,3 +486,16 @@ transition: all 0.3s;
   transform: scale(1.3);
   
 }
+
+.animationA{
+ 
+  animation: animationA 3s infinite;
+ 
+  
+}
+@keyframes animationA{
+  0%{transform: rotate(0deg);}
+  20%{transform: rotate(20deg);}
+  60%{transform: rotate(-20deg);}
+  100%{transform: rotate(0deg);}
+}
