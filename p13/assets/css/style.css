@@ -17,8 +17,24 @@
 
     --h-color:#F1F1F1;
     --j-color:#F0F1EC;
-    --k-color:#F19DA1;
+    --k-color:#222222;
     --l-color:#1B1F22;
+
+    --m-color:#6FD65E;
+    --n-color:#1FB102;
+
+    --o-color:#5FAAA3;
+    --p-color:#088178;
+    /* ---------- */
+    --q-color:#8BCEFF;
+    --r-color:#00B7ED;
+
+    --s-color:#A48BFF;
+    --v-color:#714AFF;
+
+    --w-color:#6678F3;
+    --x-color:#1734F1;
+
     --fff-color:#FFFFFF;
     
 
@@ -70,6 +86,22 @@
 .j-color{color:var(--j-color) !important;}
 .k-color{color:var(--k-color) !important;}
 .l-color{color:var(--l-color) !important;}
+
+.m-color{color:var(--m-color) !important;}
+.n-color{color:var(--n-color) !important;}
+
+.o-color{color:var(--o-color) !important;}
+.p-color{color:var(--p-color) !important;}
+
+.q-color{color:var(--q-color) !important;}
+.r-color{color:var(--r-color) !important;}
+
+.s-color{color:var(--s-color) !important;}
+.v-color{color:var(--v-color) !important;}
+
+.w-color{color:var(--w-color) !important;}
+.x-color{color:var(--x-color) !important;}
+
 .fff-color{color:var(--fff-color) !important;}
 
 /* background-colors class */
@@ -86,6 +118,22 @@
 .bg-j-color{background-color:var(--j-color) !important;}
 .bg-k-color{background-color:var(--k-color) !important;}
 .bg-l-color{background-color:var(--l-color) !important;}
+
+.bg-l-color{background-color:var(--l-color) !important;}
+.bg-m-color{background-color:var(--m-color) !important;}
+.bg-n-color{background-color:var(--n-color) !important;}
+.bg-o-color{background-color:var(--o-color) !important;}
+.bg-p-color{background-color:var(--p-color) !important;}
+
+.bg-q-color{background-color:var(--q-color) !important;}
+.bg-r-color{background-color:var(--r-color) !important;}
+
+.bg-s-color{background-color:var(--s-color) !important;}
+.bg-v-color{background-color:var(--v-color) !important;}
+
+.bg-w-color{background-color:var(--w-color) !important;}
+.bg-x-color{background-color:var(--x-color) !important;}
+
 .bg-fff-color{background-color:var(--fff-color) !important;}
 
 
@@ -386,7 +434,7 @@ body{
 .login-menu{
   background:#ffffff;
   display: none;
-  li a{margin: 3px;color:var(--h-color);}
+  li a{margin: 3px;color:var(--l-color);}
   li:hover{
     right: 2%;
     transform: scaleX(1.1);
@@ -420,7 +468,7 @@ body{
 }
   .categories-menu{
     display: none;
-    width: 70%;
+    width: 80%;
     position: absolute;
     text-align: center;
     left: 15%;
