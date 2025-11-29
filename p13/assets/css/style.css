@@ -9,13 +9,13 @@
     --a-color:#088178;
     --b-color:#D9F4E2;
     --c-color:#39B4AC;
-    --d-color:#bbbbbb;
+    --d-color:#FDE1BD;
 
     --e-color:#FFA50F;
     --f-color:#FF0000;
     --g-color:#D2AF91;
 
-    --h-color:#686F82;
+    --h-color:#F1F1F1;
     --j-color:#F0F1EC;
     --k-color:#F19DA1;
     --l-color:#1B1F22;
@@ -139,7 +139,7 @@
 .max-h50{max-height: 50vw!important;}
 .carousel {
   max-width: 100%; /* ضبط العرض الأقصى للحاوية */
-  max-height: 500px;
+  max-height: 30rem; /* ضبط الارتفاع الأقصى للحاوية */
      /* ضبط الارتفاع الثابت */
   }
   .carousel-inner{
@@ -240,17 +240,19 @@ body{
   scrollbar-width: none;  /* Firefox */
 }
 
-
+.up-1{transition: all 3s;}
+.up-1:hover{top:-3px;}
 
 /* size */
 .as1-1{aspect-ratio: 1/1 !important;}
-.t-scale-2{transform: scale(2);}
+.t-scale-1-1:hover{transition: all 0.5s;transform: scale(1.1);}
+.t-scale-2:hover{transition: all 0.5s;transform: scale(2);}
 
 .scaleX1{ transition: all 0.3; z-index: 10;}
 .scaleX1:hover{transform: scale(1.1);transition: all 0.3s !important;}
 .transition-all-03{transition: all 0.3s !important;}
 
-/* borders */
+/* borders */ 
 .br-none{border:none !important;}
 .br-20{border-radius: 20px !important;}
 .br-10{border-radius: 10px !important;}
@@ -408,4 +410,31 @@ body{
   padding: 2px;
   background: var(--b-color);
   z-index: 1000;  
+}
+
+.categoriesMenu:hover .categories-menu{
+  display: flex;
+  background-color: #ffffff;
+  z-index: 1000;
+  padding: 1%;
+}
+  .categories-menu{
+    display: none;
+    width: 70%;
+    position: absolute;
+    text-align: center;
+    left: 15%;
+    min-height: 225px;
+    border-radius: 10px;
+    & ul>li{margin: 5px 0;}
+    & ul>li:hover{transition: all 0.3s;transform: scale(1.1);}
+    & ul>li>a{color: var(--l-color);font-weight: bold;}
+  }
+  .Best-Selling .product{
+    overflow:hidden;
+  }
+.Best-Selling .product:hover img{
+transition: all 0.3s;
+  transform: scale(1.3);
+  
 }
