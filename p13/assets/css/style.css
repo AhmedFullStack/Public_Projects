@@ -324,6 +324,7 @@ body{
 .br-5-h{border-radius: 5px !important;}
 
 .br-all-1-h{border: 1px solid var(--h-color);}
+.br-all-2-h{border: 2px solid var(--h-color);}
 .br-t-1-h{border-top: 1px solid var(--h-color);}
 .br-m-1-h{border-bottom: 1px solid var(--h-color);}
 .br-m-2-h{border-bottom: 2px solid var(--h-color);}
