@@ -466,6 +466,7 @@ body{
   background-color: #ffffff;
   z-index: 1000;
   padding: 1%;
+  left:4%;
 }
   .categories-menu{
     display: none;
