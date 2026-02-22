@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="glowing.art — معرض أعمال فنية راقية. استكشفي عالماً من الفن الإبداعي الأنيق والجميل.">
+  <meta name="keywords" content="فن, معرض, glowing art, فنانة, أعمال فنية, portfolio">
+  <meta name="author" content="glowing.art">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="glowing.art — Portfolio فنية">
+  <meta property="og:description" content="معرض أعمال فنية راقية وأنيقة. استكشفي عالماً من الإبداع والجمال.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://glowing.art">
+  <meta property="og:image" content="https://glowing.art/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="glowing.art — Portfolio فنية">
+  <meta name="twitter:description" content="معرض أعمال فنية راقية وأنيقة.">
+  <link rel="canonical" href="https://glowing.art">
+  <title>glowing.art | معرض فني راقٍ</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "glowing.art",
+    "url": "https://glowing.art",
+    "jobTitle": "فنانة بصرية",
+    "description": "فنانة بصرية متخصصة في الأعمال الفنية الأنيقة والراقية",
+    "sameAs": []
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rose: #e8a4b8;
+      --rose-deep: #c97b9a;
+      --blush: #f5d5e0;
+      --mauve: #9b7b8e;
+      --lavender: #c4afc8;
+      --cream: #fdf6f0;
+      --dusty: #f0e6ee;
+      --gold: #d4a574;
+      --charcoal: #2d2230;
+      --soft-dark: #3d2d3a;
+      --text-light: #7a5f72;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--soft-dark);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* Custom Cursor */
+    .cursor {
+      width: 12px; height: 12px;
+      background: var(--rose-deep);
+      border-radius: 50%;
+      position: fixed; top: 0; left: 0;
+      pointer-events: none; z-index: 9999;
+      transition: transform 0.15s ease, background 0.3s;
+      mix-blend-mode: multiply;
+    }
+    .cursor-trail {
+      width: 32px; height: 32px;
+      border: 1.5px solid var(--rose);
+      border-radius: 50%;
+      position: fixed; top: 0; left: 0;
+      pointer-events: none; z-index: 9998;
+      transition: transform 0.35s ease;
+    }
+    .cursor.hover { transform: scale(2.5); background: var(--lavender); }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 9997; opacity: 0.4;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      padding: 1.5rem 3rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(253,246,240,0.95) 0%, transparent 100%);
+      backdrop-filter: blur(8px);
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-style: italic;
+      color: var(--charcoal); text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .logo span { color: var(--rose-deep); }
+    .nav-links {
+      display: flex; gap: 2.5rem; list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.85rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--text-light);
+      text-decoration: none; font-weight: 500;
+      position: relative; transition: color 0.3s;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute;
+      bottom: -3px; left: 0; width: 0; height: 1px;
+      background: var(--rose-deep); transition: width 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--rose-deep); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-toggle { display: none; background: none; border: none; cursor: none; flex-direction: column; gap: 5px; }
+    .nav-toggle span { display: block; width: 24px; height: 1.5px; background: var(--soft-dark); transition: 0.3s; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      position: relative; overflow: hidden;
+    }
+    .hero-left {
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 8rem 3rem 4rem 5rem;
+      position: relative; z-index: 2;
+    }
+    .hero-eyebrow {
+      font-size: 0.75rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1.5rem; font-weight: 500;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block;
+      width: 40px; height: 1px; background: var(--gold);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 1.05; color: var(--charcoal);
+      margin-bottom: 1.5rem;
+    }
+    h1 em { color: var(--rose-deep); display: block; }
+    .hero-desc {
+      font-size: 1.05rem; line-height: 1.9;
+      color: var(--text-light); max-width: 400px;
+      margin-bottom: 3rem; font-weight: 300;
+    }
+    .btn-group { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.9rem 2.2rem;
+      background: var(--charcoal); color: var(--cream);
+      text-decoration: none; font-size: 0.85rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      transition: all 0.35s ease; border: 1.5px solid var(--charcoal);
+    }
+    .btn-primary:hover {
+      background: transparent; color: var(--charcoal);
+    }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-size: 0.85rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--rose-deep);
+      text-decoration: none; transition: gap 0.3s;
+    }
+    .btn-secondary:hover { gap: 1rem; }
+    .btn-arrow { font-size: 1.1rem; transition: transform 0.3s; }
+    .btn-secondary:hover .btn-arrow { transform: translateX(-4px); }
+
+    .hero-right {
+      position: relative; overflow: hidden;
+    }
+    .hero-img-wrap {
+      position: absolute; inset: 0;
+      display: grid; grid-template-rows: 1fr 1fr; gap: 0;
+    }
+    .hero-img-main {
+      background: linear-gradient(135deg, var(--blush) 0%, var(--lavender) 50%, var(--rose) 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero-img-main::after {
+      content: '✦';
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      font-size: 1.5rem; color: rgba(255,255,255,0.6);
+      animation: spin 8s linear infinite;
+    }
+    @keyframes spin { to { transform: translateX(-50%) rotate(360deg); } }
+    .hero-img-secondary {
+      background: linear-gradient(135deg, var(--dusty) 0%, var(--blush) 100%);
+    }
+
+    /* Floating shapes */
+    .shape {
+      position: absolute; border-radius: 50%;
+      background: radial-gradient(circle, var(--rose) 0%, transparent 70%);
+      filter: blur(60px); opacity: 0.3;
+      animation: float 8s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .shape-1 { width: 500px; height: 500px; top: -100px; right: -100px; animation-delay: 0s; }
+    .shape-2 { width: 300px; height: 300px; bottom: 100px; left: -50px; background: radial-gradient(circle, var(--lavender) 0%, transparent 70%); animation-delay: 3s; }
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(20px, -30px) scale(1.05); }
+    }
+
+    /* SCROLL INDICATOR */
+    .scroll-ind {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      color: var(--text-light); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 1px; height: 50px; background: linear-gradient(to bottom, var(--rose-deep), transparent);
+      animation: scrollDrop 2s ease-in-out infinite;
+    }
+    @keyframes scrollDrop {
+      0% { transform: scaleY(0); transform-origin: top; }
+      50% { transform: scaleY(1); transform-origin: top; }
+      51% { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ABOUT STRIP */
+    .about-strip {
+      background: var(--charcoal);
+      padding: 1.2rem 0; overflow: hidden;
+    }
+    .strip-track {
+      display: flex; white-space: nowrap;
+      animation: stripMove 20s linear infinite;
+    }
+    .strip-item {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-style: italic;
+      color: var(--rose); padding: 0 2rem;
+      flex-shrink: 0;
+    }
+    .strip-dot { color: var(--gold); margin: 0 0.5rem; }
+    @keyframes stripMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* SECTION COMMON */
+    section { padding: 6rem 0; }
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 3rem; }
+    .section-header { text-align: center; margin-bottom: 4rem; }
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem; display: block;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: var(--charcoal); line-height: 1.15;
+    }
+    h2 span { color: var(--rose-deep); font-style: italic; }
+    .section-sub {
+      margin-top: 1rem; color: var(--text-light);
+      font-size: 1rem; font-weight: 300; line-height: 1.8;
+    }
+
+    /* GALLERY */
+    .gallery-section { background: var(--dusty); }
+    .gallery-filters {
+      display: flex; justify-content: center; gap: 0.5rem;
+      flex-wrap: wrap; margin-bottom: 3rem;
+    }
+    .filter-btn {
+      padding: 0.55rem 1.5rem;
+      border: 1.5px solid var(--rose); background: transparent;
+      color: var(--rose-deep); font-family: 'Tajawal', sans-serif;
+      font-size: 0.8rem; letter-spacing: 0.1em; cursor: none;
+      transition: all 0.3s ease; border-radius: 50px;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--rose-deep); color: white; border-color: var(--rose-deep);
+    }
+
+    .gallery-masonry {
+      columns: 3; column-gap: 1.5rem;
+    }
+    .gallery-item {
+      break-inside: avoid; margin-bottom: 1.5rem;
+      position: relative; overflow: hidden;
+      border-radius: 2px;
+      cursor: none;
+    }
+    .gallery-item-inner {
+      position: relative; overflow: hidden;
+    }
+    .gallery-placeholder {
+      width: 100%; display: block;
+      background: linear-gradient(135deg, var(--blush), var(--lavender));
+      transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+      position: relative;
+    }
+    .gallery-item:hover .gallery-placeholder { transform: scale(1.05); }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(45,34,48,0.85) 0%, transparent 60%);
+      opacity: 0; transition: opacity 0.4s ease;
+      display: flex; flex-direction: column;
+      justify-content: flex-end; padding: 1.5rem;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; color: white;
+      transform: translateY(10px); transition: transform 0.4s;
+    }
+    .gallery-item:hover .gallery-title { transform: translateY(0); }
+    .gallery-cat {
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--rose);
+      transform: translateY(10px); transition: transform 0.4s 0.05s;
+    }
+    .gallery-item:hover .gallery-cat { transform: translateY(0); }
+
+    /* Generate gradient placeholders for gallery items */
+    .g1 { height: 280px; background: linear-gradient(135deg,#f5d5e0,#c4afc8); }
+    .g2 { height: 380px; background: linear-gradient(135deg,#e8c4d4,#b09ab8); }
+    .g3 { height: 320px; background: linear-gradient(45deg,#fde8f0,#d4a574,#e8a4b8); }
+    .g4 { height: 260px; background: linear-gradient(135deg,#c4afc8,#9b7b8e); }
+    .g5 { height: 400px; background: linear-gradient(135deg,#f0e6ee,#e8a4b8); }
+    .g6 { height: 300px; background: linear-gradient(135deg,#d4a574,#c97b9a); }
+    .g7 { height: 350px; background: linear-gradient(135deg,#fdf6f0,#f5d5e0,#c4afc8); }
+    .g8 { height: 280px; background: linear-gradient(225deg,#9b7b8e,#e8a4b8); }
+    .g9 { height: 420px; background: linear-gradient(135deg,#f5d5e0,#d4a574); }
+
+    /* Art symbols in placeholders */
+    .gallery-placeholder::before {
+      content: attr(data-symbol);
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 3rem; opacity: 0.25; color: white;
+      font-family: serif; pointer-events: none;
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 9000;
+      background: rgba(45,34,48,0.97); backdrop-filter: blur(20px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.4s;
+    }
+    .lightbox.active { opacity: 1; pointer-events: all; }
+    .lightbox-content {
+      max-width: 80vw; max-height: 80vh;
+      position: relative; text-align: center;
+    }
+    .lightbox-close {
+      position: absolute; top: -50px; right: 0;
+      background: none; border: none; color: var(--rose);
+      font-size: 2rem; cursor: none; font-family: serif;
+    }
+    .lightbox-img {
+      max-width: 100%; max-height: 70vh;
+      object-fit: contain; display: block;
+      border: 1px solid rgba(232,164,184,0.2);
+    }
+    .lightbox-info { margin-top: 1.5rem; }
+    .lightbox-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; color: white; margin-bottom: 0.3rem;
+    }
+    .lightbox-info p { color: var(--rose); font-size: 0.85rem; letter-spacing: 0.15em; }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: none; border: 1px solid var(--rose);
+      color: var(--rose); width: 50px; height: 50px;
+      font-size: 1.2rem; cursor: none; transition: all 0.3s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-nav:hover { background: var(--rose); color: white; }
+    .lightbox-prev { left: -70px; }
+    .lightbox-next { right: -70px; }
+
+    /* ABOUT */
+    .about-section {
+      background: var(--cream);
+    }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-portrait {
+      width: 100%; aspect-ratio: 3/4;
+      background: linear-gradient(135deg, var(--blush) 0%, var(--lavender) 50%, var(--rose) 100%);
+      position: relative; overflow: hidden;
+    }
+    .about-portrait::before {
+      content: '✦'; position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 5rem; color: rgba(255,255,255,0.2);
+      animation: spinSlow 15s linear infinite;
+    }
+    @keyframes spinSlow { to { transform: translate(-50%,-50%) rotate(360deg); } }
+    .about-portrait-frame {
+      position: absolute; inset: -15px;
+      border: 1px solid var(--rose); z-index: -1;
+      transition: inset 0.5s;
+    }
+    .about-visual:hover .about-portrait-frame { inset: -25px; }
+    .about-badge {
+      position: absolute; bottom: -1.5rem; right: -1.5rem;
+      width: 120px; height: 120px; border-radius: 50%;
+      background: var(--charcoal);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      border: 3px solid var(--gold);
+    }
+    .about-badge-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; color: var(--gold); line-height: 1;
+    }
+    .about-badge-text { font-size: 0.6rem; letter-spacing: 0.15em; color: var(--rose); text-align: center; }
+
+    .about-content h2 { text-align: right; margin-bottom: 1.5rem; }
+    .about-content p {
+      color: var(--text-light); line-height: 1.9; font-weight: 300;
+      margin-bottom: 1.2rem;
+    }
+    .about-stats {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem;
+      margin: 2rem 0; padding: 2rem 0; border-top: 1px solid var(--blush); border-bottom: 1px solid var(--blush);
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem; color: var(--rose-deep); display: block;
+    }
+    .stat-label { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--text-light); text-transform: uppercase; }
+    .skills-list { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
+    .skill-tag {
+      padding: 0.4rem 1rem; border: 1px solid var(--rose);
+      font-size: 0.78rem; color: var(--rose-deep); letter-spacing: 0.08em;
+      border-radius: 50px;
+    }
+
+    /* SERVICES */
+    .services-section { background: var(--charcoal); }
+    .services-section .section-label, .services-section h2 { color: var(--cream); }
+    .services-section h2 span { color: var(--rose); }
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; }
+    .service-card {
+      border: 1px solid rgba(232,164,184,0.15);
+      padding: 2.5rem 2rem; position: relative;
+      transition: border-color 0.3s, transform 0.3s;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(to right, transparent, var(--rose), transparent);
+      transform: scaleX(0); transition: transform 0.4s;
+    }
+    .service-card:hover { border-color: rgba(232,164,184,0.4); transform: translateY(-4px); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { font-size: 2.5rem; margin-bottom: 1.5rem; display: block; }
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: var(--cream); margin-bottom: 0.8rem;
+    }
+    .service-card p { color: rgba(253,246,240,0.6); font-size: 0.9rem; line-height: 1.8; font-weight: 300; }
+
+    /* TESTIMONIALS */
+    .testimonials-section { background: var(--dusty); }
+    .testimonials-slider {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem;
+    }
+    .testimonial-card {
+      background: var(--cream); padding: 2.5rem;
+      position: relative; border-radius: 2px;
+    }
+    .testimonial-card::before {
+      content: '❝'; position: absolute; top: 1.5rem; left: 1.5rem;
+      font-size: 3rem; color: var(--rose); opacity: 0.3;
+      font-family: Georgia, serif; line-height: 1;
+    }
+    .testimonial-text {
+      font-size: 0.95rem; line-height: 1.9; color: var(--text-light);
+      font-style: italic; margin-bottom: 1.5rem; margin-top: 1rem;
+      font-weight: 300;
+    }
+    .testimonial-author {
+      display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--blush); padding-top: 1rem;
+    }
+    .author-avatar {
+      width: 45px; height: 45px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--rose), var(--lavender));
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 1.2rem; font-family: serif; flex-shrink: 0;
+    }
+    .author-name { font-weight: 500; font-size: 0.9rem; color: var(--charcoal); }
+    .author-role { font-size: 0.75rem; color: var(--text-light); }
+    .stars { color: var(--gold); font-size: 0.8rem; margin-bottom: 0.2rem; letter-spacing: 2px; }
+
+    /* CONTACT */
+    .contact-section { background: var(--cream); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .contact-info h2 { text-align: right; margin-bottom: 1.5rem; }
+    .contact-info p { color: var(--text-light); line-height: 1.9; font-weight: 300; margin-bottom: 2rem; }
+    .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-link {
+      display: flex; align-items: center; gap: 1rem;
+      color: var(--text-light); text-decoration: none; font-size: 0.95rem;
+      transition: color 0.3s; padding: 0.8rem 0; border-bottom: 1px solid var(--blush);
+    }
+    .contact-link:hover { color: var(--rose-deep); }
+    .contact-link-icon { font-size: 1.2rem; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .form-input, .form-textarea {
+      background: var(--dusty); border: 1px solid transparent;
+      padding: 0.9rem 1.2rem; font-family: 'Tajawal', sans-serif;
+      font-size: 0.95rem; color: var(--charcoal); width: 100%;
+      transition: border-color 0.3s; outline: none; border-radius: 2px;
+    }
+    .form-input:focus, .form-textarea:focus { border-color: var(--rose); }
+    .form-textarea { resize: vertical; min-height: 130px; }
+    .form-submit {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 1rem 2.5rem; background: var(--rose-deep); color: white;
+      border: 1.5px solid var(--rose-deep); font-family: 'Tajawal', sans-serif;
+      font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: none; transition: all 0.35s ease; align-self: flex-start;
+    }
+    .form-submit:hover { background: var(--charcoal); border-color: var(--charcoal); }
+
+    /* FOOTER */
+    footer {
+      background: var(--charcoal); padding: 4rem 0 2rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand .logo { font-size: 1.8rem; display: block; margin-bottom: 1rem; }
+    .footer-brand p { color: rgba(253,246,240,0.5); font-size: 0.9rem; line-height: 1.8; font-weight: 300; }
+    .footer-col h4 { color: var(--rose); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-links a { color: rgba(253,246,240,0.5); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--rose); }
+    .social-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
+    .social-link {
+      width: 40px; height: 40px; border: 1px solid rgba(232,164,184,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--rose); text-decoration: none; font-size: 1rem;
+      transition: all 0.3s;
+    }
+    .social-link:hover { background: var(--rose); color: var(--charcoal); border-color: var(--rose); }
+    .footer-bottom {
+      border-top: 1px solid rgba(232,164,184,0.1); padding-top: 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { color: rgba(253,246,240,0.3); font-size: 0.8rem; }
+    .footer-bottom a { color: var(--rose); text-decoration: none; }
+
+    /* ANIMATIONS */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.15s; }
+    .reveal-delay-2 { transition-delay: 0.3s; }
+    .reveal-delay-3 { transition-delay: 0.45s; }
+
+    /* MOBILE NAV */
+    .mobile-nav {
+      position: fixed; inset: 0; z-index: 999;
+      background: var(--cream); display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 2rem;
+      transform: translateX(-100%); transition: transform 0.4s ease;
+    }
+    .mobile-nav.open { transform: translateX(0); }
+    .mobile-nav a { font-size: 1.8rem; font-family: 'Playfair Display', serif; color: var(--charcoal); text-decoration: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .gallery-masonry { columns: 2; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-slider { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .hero { grid-template-columns: 1fr; min-height: 100svh; }
+      .hero-left { padding: 7rem 1.5rem 3rem; }
+      .hero-right { display: none; }
+      .hero-desc { max-width: 100%; }
+      .container { padding: 0 1.5rem; }
+      section { padding: 4rem 0; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .gallery-masonry { columns: 2; column-gap: 0.8rem; }
+      .gallery-item { margin-bottom: 0.8rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .lightbox-prev { left: -10px; }
+      .lightbox-next { right: -10px; }
+      .lightbox-content { max-width: 95vw; }
+    }
+    @media (max-width: 480px) {
+      .gallery-masonry { columns: 1; }
+      h1 { font-size: 2.5rem; }
+      .about-stats { grid-template-columns: 1fr; }
+    }
+
+    /* Page load animation */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-eyebrow { animation: fadeIn 0.8s ease 0.2s both; }
+    h1 { animation: fadeIn 0.8s ease 0.4s both; }
+    .hero-desc { animation: fadeIn 0.8s ease 0.6s both; }
+    .btn-group { animation: fadeIn 0.8s ease 0.8s both; }
+
+    /* Ad placeholder style (for AdSense compliance) */
+    .ad-placeholder {
+      text-align: center; padding: 1rem;
+      background: rgba(232,164,184,0.05);
+      border: 1px dashed rgba(232,164,184,0.2);
+      color: var(--text-light); font-size: 0.75rem;
+      letter-spacing: 0.1em; margin: 2rem 0;
+    }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute; top: -100%; left: 1rem;
+      background: var(--rose-deep); color: white;
+      padding: 0.5rem 1rem; z-index: 9999;
+      text-decoration: none; font-size: 0.85rem;
+      transition: top 0.3s;
+    }
+    .skip-link:focus { top: 1rem; }
+  </style>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">الانتقال للمحتوى الرئيسي</a>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- NAV -->
+  <nav role="navigation" aria-label="القائمة الرئيسية">
+    <a href="/" class="logo" aria-label="glowing.art الرئيسية">glowing<span>.art</span></a>
+    <ul class="nav-links">
+      <li><a href="#gallery">المعرض</a></li>
+      <li><a href="#about">عني</a></li>
+      <li><a href="#services">خدمات</a></li>
+      <li><a href="#testimonials">آراء</a></li>
+      <li><a href="#contact">تواصل</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="القائمة المحمولة">
+    <a href="#gallery" onclick="closeMobileNav()">المعرض</a>
+    <a href="#about" onclick="closeMobileNav()">عني</a>
+    <a href="#services" onclick="closeMobileNav()">خدمات</a>
+    <a href="#testimonials" onclick="closeMobileNav()">آراء</a>
+    <a href="#contact" onclick="closeMobileNav()">تواصل</a>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <header class="hero" role="banner">
+      <div class="shape shape-1" aria-hidden="true"></div>
+      <div class="shape shape-2" aria-hidden="true"></div>
+
+      <div class="hero-left">
+        <p class="hero-eyebrow">فنانة بصرية — Portfolio</p>
+        <h1>
+          الفن يسكن<br>
+          <em>داخل كل لمسة</em>
+        </h1>
+        <p class="hero-desc">
+          عالم من الألوان والإبداع، حيث تتحوّل كل فكرة إلى لوحة تحكي قصة. أعمال فنية أصيلة تجمع بين الجمال والروح.
+        </p>
+        <div class="btn-group">
+          <a href="#gallery" class="btn-primary">استعرضي الأعمال ✦</a>
+          <a href="#contact" class="btn-secondary">تواصلي معي <span class="btn-arrow">←</span></a>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-img-wrap">
+          <div class="hero-img-main"></div>
+          <div class="hero-img-secondary"></div>
+        </div>
+      </div>
+
+      <div class="scroll-ind" aria-hidden="true">
+        <span>اكتشفي</span>
+        <div class="scroll-line"></div>
+      </div>
+    </header>
+
+    <!-- STRIP -->
+    <div class="about-strip" aria-hidden="true">
+      <div class="strip-track">
+        <span class="strip-item">فن بصري <span class="strip-dot">✦</span></span>
+        <span class="strip-item">تصميم راقٍ <span class="strip-dot">✦</span></span>
+        <span class="strip-item">إبداع أصيل <span class="strip-dot">✦</span></span>
+        <span class="strip-item">لوحات عطرية <span class="strip-dot">✦</span></span>
+        <span class="strip-item">طباعة فنية <span class="strip-dot">✦</span></span>
+        <span class="strip-item">تصوير فني <span class="strip-dot">✦</span></span>
+        <span class="strip-item">فن بصري <span class="strip-dot">✦</span></span>
+        <span class="strip-item">تصميم راقٍ <span class="strip-dot">✦</span></span>
+        <span class="strip-item">إبداع أصيل <span class="strip-dot">✦</span></span>
+        <span class="strip-item">لوحات عطرية <span class="strip-dot">✦</span></span>
+        <span class="strip-item">طباعة فنية <span class="strip-dot">✦</span></span>
+        <span class="strip-item">تصوير فني <span class="strip-dot">✦</span></span>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">المعرض الفني</span>
+          <h2 id="gallery-heading">أعمالي <span>المختارة</span></h2>
+          <p class="section-sub">كل عمل قصيدة بصرية تحمل روحاً وقصة خاصة</p>
+        </div>
+
+        <div class="gallery-filters reveal" role="group" aria-label="تصفية الأعمال">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">الكل</button>
+          <button class="filter-btn" data-filter="painting" aria-pressed="false">لوحات</button>
+          <button class="filter-btn" data-filter="digital" aria-pressed="false">رقمي</button>
+          <button class="filter-btn" data-filter="portrait" aria-pressed="false">بورتريه</button>
+          <button class="filter-btn" data-filter="abstract" aria-pressed="false">تجريدي</button>
+        </div>
+
+        <div class="gallery-masonry" role="list" id="galleryGrid">
+
+          <article class="gallery-item reveal" data-category="painting" role="listitem">
+            <div class="gallery-item-inner">
+              <div class="gallery-placeholder g1" data-symbol="🌸" aria-label="لوحة زهور ربيعية" role="img">
+                <div class="gallery-overlay">
+                  <p class="gallery-cat">لوحات</p>
+                  <h3 class="gallery-title">نفَس الربيع</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="gallery-item reveal reveal-delay-1" data-category="portrait" role="listitem">
+            <div class="gallery-item-inner">
+              <div class="gallery-placeholder g2" data-symbol="✨" aria-label="بورتريه فني" role="img">
+                <div class="gallery-overlay">
+                  <p class="gallery-cat">بورتريه</p>
+                  <h3 class="gallery-title">روح هادئة</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="gallery-item reveal reveal-delay-2" data-category="abstract" role="listitem">
+            <div class="gallery-item-inner">
+              <div class="gallery-placeholder g3" data-symbol="🎨" aria-label="تجريد ألوان" role="img">
+                <div class="gallery-overlay">
+                  <p class="gallery-cat">تجريدي</p>
+                  <h3 class="gallery-title">مشاعر ذهبية</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="gallery-item reveal" data-category="digital" role="listitem">
+            <div class="gallery-item-inner">
+              <div class="gallery-placeholder g4" data-symbol="💫" aria-label="فن رقمي" role="img">
+                <div class="gallery-overlay">
+                  <p class="gallery-cat">رقمي</p>
+                  <h3 class="gallery-title">عالم خيالي</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="gallery-item reveal reveal-delay-1" data-category="painting" role="listitem">
+            <div class="gallery-item-inner">
+              <div class="gallery-placeholder g5" data-symbol="🌺" aria-label="لوحة زيتية" role="img">
+                <div class="gallery-overlay">
+                  <p class="gallery-cat">لوحات</p>
+                  <h3 class="gallery-title">حديقة سرية</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="gallery-item reveal reveal-delay-2" data-category="abstract" role="listitem">
+            <div class="gallery-item-inner">
+              <div class="gallery-placeholder g6" data-symbol="⭐" aria-label="تجريد لوني" role="img">
+                <div class="gallery-overlay">
+                  <p class="gallery-cat">تجريدي</p>
+                  <h3 class="gallery-title">بوهيميا</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="gallery-item reveal" data-category="portrait" role="listitem">
+            <div class="gallery-item-inner">
+              <div class="gallery-placeholder g7" data-symbol="🕊️" aria-label="بورتريه امرأة" role="img">
+                <div class="gallery-overlay">
+                  <p class="gallery-cat">بورتريه</p>
+                  <h3 class="gallery-title">سكينة الروح</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="gallery-item reveal reveal-delay-1" data-category="digital" role="listitem">
+            <div class="gallery-item-inner">
+              <div class="gallery-placeholder g8" data-symbol="🌙" aria-label="تصميم رقمي" role="img">
+                <div class="gallery-overlay">
+                  <p class="gallery-cat">رقمي</p>
+                  <h3 class="gallery-title">ضوء القمر</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="gallery-item reveal reveal-delay-2" data-category="painting" role="listitem">
+            <div class="gallery-item-inner">
+              <div class="gallery-placeholder g9" data-symbol="🦋" aria-label="لوحة ألوان مائية" role="img">
+                <div class="gallery-overlay">
+                  <p class="gallery-cat">لوحات</p>
+                  <h3 class="gallery-title">تحوّل</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="about-portrait" role="img" aria-label="صورة الفنانة"></div>
+            <div class="about-portrait-frame" aria-hidden="true"></div>
+            <div class="about-badge" aria-label="خبرة 7 سنوات">
+              <span class="about-badge-num">7+</span>
+              <span class="about-badge-text">سنوات<br>خبرة</span>
+            </div>
+          </div>
+          <div class="about-content reveal reveal-delay-1">
+            <span class="section-label">من أنا</span>
+            <h2 id="about-heading">فنانة تؤمن<br> بـ <span>جمال اللحظة</span></h2>
+            <p>مرحباً، أنا Layla — فنانة بصرية شغوفة بتحويل المشاعر الإنسانية إلى أعمال فنية تلمس القلوب. أعيش في عالم تتشابك فيه الألوان مع العواطف.</p>
+            <p>تنوّعت أعمالي بين اللوحات الزيتية والرقمية والتجريدية، وكان هدفي دائماً أن تحمل كل لمسة فرشاة قصة تستحق أن تُروى.</p>
+            <div class="about-stats" aria-label="إحصائيات">
+              <div class="stat-item">
+                <span class="stat-num">150+</span>
+                <span class="stat-label">عمل فني</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">80+</span>
+                <span class="stat-label">عميلة راضية</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">12</span>
+                <span class="stat-label">معرض</span>
+              </div>
+            </div>
+            <div class="skills-list" aria-label="المهارات">
+              <span class="skill-tag">ألوان زيتية</span>
+              <span class="skill-tag">تصميم رقمي</span>
+              <span class="skill-tag">ألوان مائية</span>
+              <span class="skill-tag">بورتريه</span>
+              <span class="skill-tag">فن تجريدي</span>
+              <span class="skill-tag">تصوير فني</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label" style="color:var(--rose)">ماذا أقدم</span>
+          <h2 id="services-heading" style="color:var(--cream)">خدماتي <span>الفنية</span></h2>
+          <p class="section-sub" style="color:rgba(253,246,240,0.6)">أحوّل أحلامك إلى واقع بصري يعيش إلى الأبد</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">🎨</span>
+            <h3>لوحات مخصصة</h3>
+            <p>لوحات زيتية وألوان مائية مرسومة يدوياً بأسلوب فريد يعكس شخصيتك وذوقك الخاص.</p>
+          </article>
+          <article class="service-card reveal reveal-delay-1">
+            <span class="service-icon" aria-hidden="true">✨</span>
+            <h3>تصميم رقمي</h3>
+            <p>أعمال رقمية احترافية لمواقع التواصل الاجتماعي والمشاريع الإبداعية بجودة عالية.</p>
+          </article>
+          <article class="service-card reveal reveal-delay-2">
+            <span class="service-icon" aria-hidden="true">🖼️</span>
+            <h3>طباعة فنية</h3>
+            <p>طباعة أعمالي على كانفاس ومواد فاخرة مناسبة للهدايا والديكور المنزلي الراقي.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">👤</span>
+            <h3>بورتريه شخصي</h3>
+            <p>أرسم وجهك أو وجوه من تحبين بأسلوب فني راقٍ يجعل اللحظات حية إلى الأبد.</p>
+          </article>
+          <article class="service-card reveal reveal-delay-1">
+            <span class="service-icon" aria-hidden="true">📚</span>
+            <h3>ورش تعليمية</h3>
+            <p>ورش فن إبداعية أونلاين وحضورية لتعليم أساسيات الرسم والتلوين لجميع المستويات.</p>
+          </article>
+          <article class="service-card reveal reveal-delay-2">
+            <span class="service-icon" aria-hidden="true">💌</span>
+            <h3>هدايا فنية</h3>
+            <p>تصميم هدايا فنية مميزة لمناسبات الأعراس والتخرج والأعياد بلمسة شخصية دافئة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">ماذا قالوا</span>
+          <h2 id="testimonials-heading">آراء <span>عميلاتي</span></h2>
+        </div>
+        <div class="testimonials-slider">
+          <article class="testimonial-card reveal">
+            <p class="stars" aria-label="5 نجوم">★★★★★</p>
+            <p class="testimonial-text">"طلبت لوحة بورتريه لي ولم أتوقع أن تكون بهذا الجمال. الفنانة فهمت ما أريد تماماً وأضافت لمسة روحية لم أفكر فيها."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">ن</div>
+              <div>
+                <p class="author-name">نور الهدى</p>
+                <p class="author-role">مصممة داخلية</p>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card reveal reveal-delay-1">
+            <p class="stars" aria-label="5 نجوم">★★★★★</p>
+            <p class="testimonial-text">"استلمت اللوحة وبكيت من الجمال! هدية عرسي كانت من أجمل ما تلقيته. كل تفصيلة فيها تحكي قصة."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">س</div>
+              <div>
+                <p class="author-name">سارة محمد</p>
+                <p class="author-role">معلمة ومحبة للفن</p>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card reveal reveal-delay-2">
+            <p class="stars" aria-label="5 نجوم">★★★★★</p>
+            <p class="testimonial-text">"ورشة الألوان المائية كانت تجربة لا تُنسى! الأسلوب التعليمي رائع والجو كان ممتعاً جداً. بالتأكيد سأعود!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">ر</div>
+              <div>
+                <p class="author-name">رنا العلي</p>
+                <p class="author-role">طالبة جامعية</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <span class="section-label">تواصلي</span>
+            <h2 id="contact-heading">لنبدأ رحلة <span>إبداعية</span> معاً</h2>
+            <p>هل لديك فكرة في ذهنك؟ تواصلي معي وسنحوّلها إلى عمل فني يستحق التأمل.</p>
+            <div class="contact-links">
+              <a href="mailto:hello@glowing.art" class="contact-link" aria-label="البريد الإلكتروني">
+                <span class="contact-link-icon" aria-hidden="true">📧</span>
+                hello@glowing.art
+              </a>
+              <a href="https://instagram.com/glowing.art" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="انستغرام">
+                <span class="contact-link-icon" aria-hidden="true">📸</span>
+                @glowing.art
+              </a>
+              <a href="https://wa.me/9665XXXXXXXX" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="واتساب">
+                <span class="contact-link-icon" aria-hidden="true">💬</span>
+                واتساب للطلبات
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <form class="contact-form" name="contact" method="POST" action="/thank-you" aria-label="نموذج التواصل" novalidate>
+              <input type="hidden" name="form-name" value="contact">
+              <div class="form-group">
+                <label for="name" class="form-label">الاسم</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="اسمك الكريم" required autocomplete="name" minlength="2">
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="بريدك الإلكتروني" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="service" class="form-label">نوع الخدمة</label>
+                <select id="service" name="service" class="form-input" style="appearance:none">
+                  <option value="">اختاري الخدمة</option>
+                  <option value="custom">لوحة مخصصة</option>
+                  <option value="portrait">بورتريه</option>
+                  <option value="digital">تصميم رقمي</option>
+                  <option value="print">طباعة فنية</option>
+                  <option value="workshop">ورشة تعليمية</option>
+                  <option value="gift">هدية فنية</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">رسالتك</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="أخبريني عن فكرتك..." required minlength="10"></textarea>
+              </div>
+              <button type="submit" class="form-submit">أرسلي رسالتك ✦</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">glowing<span>.art</span></a>
+          <p>فن أصيل يصنعه القلب ويلمس الروح. أعمال فنية راقية لكل من يؤمن بجمال الحياة.</p>
+          <div class="social-links" aria-label="روابط التواصل الاجتماعي">
+            <a href="https://instagram.com/glowing.art" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="انستغرام">📸</a>
+            <a href="https://pinterest.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="بينتريست">📌</a>
+            <a href="https://tiktok.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="تيك توك">🎵</a>
+            <a href="mailto:hello@glowing.art" class="social-link" aria-label="البريد الإلكتروني">📧</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="#gallery">المعرض</a></li>
+            <li><a href="#about">عني</a></li>
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#testimonials">الآراء</a></li>
+            <li><a href="#contact">تواصل</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>سياسات</h4>
+          <ul class="footer-links">
+            <li><a href="/privacy-policy">سياسة الخصوصية</a></li>
+            <li><a href="/terms">شروط الاستخدام</a></li>
+            <li><a href="/cookies">سياسة الكوكيز</a></li>
+            <li><a href="/copyright">حقوق النشر</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 <a href="/">glowing.art</a> — جميع الحقوق محفوظة</p>
+        <p>صُنع بـ ✦ وعشق للفن</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة" tabindex="-1">
+    <div class="lightbox-content">
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="السابق">→</button>
+      <div class="lightbox-img" id="lightboxImg" style="width:500px;height:400px;display:flex;align-items:center;justify-content:center;font-size:5rem;"></div>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="التالي">←</button>
+      <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق">✕</button>
+      <div class="lightbox-info">
+        <h3 id="lightboxTitle">العنوان</h3>
+        <p id="lightboxCat">التصنيف</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    const trail = document.getElementById('cursorTrail');
+    let mx = 0, my = 0, tx = 0, ty = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.transform = `translate(${mx-6}px, ${my-6}px)`;
+    });
+    function animateTrail() {
+      tx += (mx - tx) * 0.12;
+      ty += (my - ty) * 0.12;
+      trail.style.transform = `translate(${tx-16}px, ${ty-16}px)`;
+      requestAnimationFrame(animateTrail);
+    }
+    animateTrail();
+    document.querySelectorAll('a, button, .gallery-item, .filter-btn').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+
+    // Mobile nav
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    navToggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    function closeMobileNav() { mobileNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); }
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    reveals.forEach(el => revealObs.observe(el));
+
+    // Gallery filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+        btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true');
+        const filter = btn.dataset.filter;
+        galleryItems.forEach(item => {
+          const show = filter === 'all' || item.dataset.category === filter;
+          item.style.opacity = show ? '1' : '0.2';
+          item.style.transform = show ? 'scale(1)' : 'scale(0.95)';
+          item.style.transition = 'opacity 0.4s, transform 0.4s';
+          item.style.pointerEvents = show ? 'all' : 'none';
+        });
+      });
+    });
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxCat = document.getElementById('lightboxCat');
+    let currentIdx = 0;
+    const items = [...galleryItems];
+
+    function openLightbox(idx) {
+      currentIdx = idx;
+      const item = items[idx];
+      const placeholder = item.querySelector('.gallery-placeholder');
+      lightboxImg.style.background = getComputedStyle(placeholder).background;
+      lightboxImg.textContent = placeholder.dataset.symbol || '✦';
+      lightboxTitle.textContent = item.querySelector('.gallery-title').textContent;
+      lightboxCat.textContent = item.querySelector('.gallery-cat').textContent;
+      lightbox.classList.add('active');
+      lightbox.focus();
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    galleryItems.forEach((item, idx) => {
+      item.addEventListener('click', () => openLightbox(idx));
+      item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openLightbox(idx); });
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('role', 'button');
+    });
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightboxPrev').addEventListener('click', () => openLightbox((currentIdx - 1 + items.length) % items.length));
+    document.getElementById('lightboxNext').addEventListener('click', () => openLightbox((currentIdx + 1) % items.length));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') openLightbox((currentIdx - 1 + items.length) % items.length);
+      if (e.key === 'ArrowLeft') openLightbox((currentIdx + 1) % items.length);
+    });
+
+    // Nav shadow on scroll
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.boxShadow = window.scrollY > 50 ? '0 4px 30px rgba(45,34,48,0.08)' : 'none';
+    }, { passive: true });
+
+    // Form handling
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.form-submit');
+      btn.textContent = 'تم الإرسال ✓';
+      btn.style.background = 'var(--gold)';
+      btn.style.borderColor = 'var(--gold)';
+      setTimeout(() => {
+        btn.textContent = 'أرسلي رسالتك ✦';
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        this.reset();
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
