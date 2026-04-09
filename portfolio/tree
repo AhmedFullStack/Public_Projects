@@ -1,0 +1,76 @@
+portfolio/                          ← جذر المشروع
+│
+├── admin/                          ← أصول لوحة التحكم (مستقلة)
+│   └── assets/
+│       ├── css/                    ← CSS خاص بالأدمن
+│       └── js/                     ← JS خاص بالأدمن
+│
+├── app/                            ← قلب التطبيق (OOP)
+│   ├── Controllers/
+│   │   ├── Admin/
+│   │   │   ├── AdminControllers.php         ← Auth + Dashboard + Messages
+│   │   │   └── ProjectsSkillsCvController.php ← CRUD للمشاريع والمهارات
+│   │   ├── FrontControllers.php    ← Portfolio, Contact, About, Privacy, CV
+│   │   └── HomeController.php      ← الصفحة الرئيسية
+│   ├── Core/
+│   │   ├── Controller.php          ← Base Controller (view, json, flash, redirect)
+│   │   ├── Database.php            ← PDO Singleton + query helpers
+│   │   ├── Lang.php                ← نظام الترجمة AR/EN
+│   │   ├── Model.php               ← Abstract Base Model (CRUD + Pagination)
+│   │   ├── Router.php              ← Front-controller Router (dynamic base_path)
+│   │   └── Security.php            ← CSRF, Rate-limit, OWASP, Headers
+│   ├── Helpers/
+│   │   └── SeoHelper.php           ← Meta tags, OG, JSON-LD, hreflang
+│   ├── Language/
+│   │   ├── ar.php                  ← جميع نصوص العربية
+│   │   └── en.php                  ← All English strings
+│   ├── Middleware/
+│   │   └── AuthMiddleware.php      ← حماية مسارات الأدمن
+│   ├── Models/
+│   │   ├── Models.php              ← Settings, Message, Skill, Category, Experience, CV
+│   │   └── ProjectModel.php        ← Project queries (featured, paginated, by slug)
+│   └── bootstrap.php               ← env loader, autoloader, helpers
+│
+├── config/
+│   └── app.php                     ← جميع إعدادات التطبيق
+│
+├── database/
+│   └── schema.sql                  ← 12 جدول محسّن + seeds
+│
+├── public/                         ← Document Root الوحيد المكشوف للإنترنت
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── app.css             ← Design system كامل
+│   │   │   └── rtl.css             ← تعديلات RTL
+│   │   ├── fonts/
+│   │   ├── images/
+│   │   └── js/
+│   │       └── app.js              ← Vanilla JS (menu, animations, AJAX)
+│   ├── uploads/
+│   │   ├── cv/                     ← ملفات السيرة الذاتية
+│   │   └── projects/               ← صور المشاريع
+│   ├── index.php                   ← نقطة الدخول الوحيدة (Front Controller)
+│   └── sitemap.php                 ← XML Sitemap ديناميكي
+│
+├── storage/
+│   ├── cache/                      ← File cache
+│   └── logs/                       ← PHP error logs
+│
+├── views/
+│   ├── admin/
+│   │   ├── dashboard.php
+│   │   └── login.php
+│   ├── components/                 ← Reusable partials
+│   ├── layouts/
+│   │   ├── admin.php               ← Layout لوحة التحكم
+│   │   └── main.php                ← Layout الموقع العام
+│   └── pages/
+│       ├── 404.php
+│       ├── contact.php
+│       ├── home.php
+│       ├── portfolio.php
+│       └── project.php
+│
+├── install.php                     ← معالج التثبيت
+├── .env.example                    ← نموذج متغيرات البيئة
+└── .htaccess                       ← Apache rewrite rules

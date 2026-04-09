@@ -1,0 +1,50 @@
+/* ============================================================
+   RTL Overrides — Arabic direction support
+   ============================================================ */
+
+   [dir="rtl"] body { font-family: 'Cairo', sans-serif; }
+
+   [dir="rtl"] .hero-content { text-align: right; }
+   [dir="rtl"] .hero-actions { flex-direction: row-reverse; }
+   [dir="rtl"] .hero-description { text-align: right; }
+   
+   [dir="rtl"] .section-header { direction: rtl; }
+   [dir="rtl"] .section-subtitle { direction: rtl; }
+   
+   [dir="rtl"] .skill-group-title { flex-direction: row-reverse; }
+   [dir="rtl"] .skill-group-title::before { margin-left: 0; }
+   
+   [dir="rtl"] .skill-bar-fill {
+     background: linear-gradient(270deg, var(--accent-dark), var(--accent));
+   }
+   
+   [dir="rtl"] .skill-header { flex-direction: row-reverse; }
+   
+   [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+   [dir="rtl"] .hero-stats { flex-direction: row-reverse; }
+   [dir="rtl"] .footer-links { flex-direction: row-reverse; }
+   
+   [dir="rtl"] .contact-info-item { flex-direction: row-reverse; text-align: right; }
+   
+   [dir="rtl"] .project-badge { direction: rtl; }
+   [dir="rtl"] .project-meta  { direction: rtl; }
+   
+   [dir="rtl"] .filter-tabs { direction: rtl; }
+   
+   [dir="rtl"] .timeline-item { direction: rtl; }
+   [dir="rtl"] .experience-timeline { padding-inline-start: 2rem; }
+   
+   [dir="rtl"] .pagination { flex-direction: row-reverse; }
+   
+   [dir="rtl"] .tech-tags { direction: rtl; }
+   
+   [dir="rtl"] .mobile-menu ul { direction: rtl; }
+   
+   /* Form direction */
+   [dir="rtl"] .form-control { text-align: right; direction: rtl; }
+   [dir="rtl"] .form-label   { text-align: right; }
+   [dir="rtl"] .form-row     { direction: rtl; }
+   
+   /* Meta card in project detail */
+   [dir="rtl"] .meta-row { flex-direction: row-reverse; }
+   [dir="rtl"] .project-meta-card { direction: rtl; text-align: right; }

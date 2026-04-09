@@ -1,0 +1,152 @@
+<?php
+/** English translations */
+return [
+
+    'nav' => [
+        'home'       => 'Home',
+        'portfolio'  => 'Portfolio',
+        'about'      => 'About',
+        'contact'    => 'Contact',
+        'privacy'    => 'Privacy Policy',
+    ],
+
+    'hero' => [
+        'badge'         => 'Available for New Projects',
+        'title'         => 'Electromechanical Engineer',
+        'subtitle'      => 'Professional',
+        'description'   => 'Designing and implementing integrated electrical and mechanical systems — from design to full commissioning.',
+        'cta_portfolio' => 'View My Work',
+        'cta_cv'        => 'Download CV',
+        'available'     => 'Available',
+    ],
+
+    'stats' => [
+        'projects'   => 'Completed Projects',
+        'experience' => 'Years Experience',
+        'clients'    => 'Satisfied Clients',
+    ],
+
+    'skills' => [
+        'title'    => 'Technical Skills',
+        'subtitle' => 'Multi-disciplinary technical capabilities',
+    ],
+
+    'portfolio' => [
+        'title'        => 'Portfolio',
+        'subtitle'     => 'Projects delivered with precision',
+        'all'          => 'All Projects',
+        'view'         => 'View Details',
+        'client'       => 'Client',
+        'year'         => 'Year',
+        'duration'     => 'Duration',
+        'technologies' => 'Technologies Used',
+        'challenges'   => 'Challenges',
+        'results'      => 'Results',
+        'back'         => 'Back to Portfolio',
+        'empty'        => 'No projects available yet.',
+        'featured'     => 'Featured Projects',
+        'related'      => 'Related Projects',
+    ],
+
+    'about' => [
+        'title'          => 'About Me',
+        'intro_title'    => 'Hi, I\'m',
+        'experience'     => 'Work Experience',
+        'education'      => 'Education',
+        'certifications' => 'Certifications',
+        'download_cv'    => 'Download CV',
+        'present'        => 'Present',
+    ],
+
+    'contact' => [
+        'title'          => 'Get In Touch',
+        'subtitle'       => 'Have a project or inquiry?',
+        'name'           => 'Full Name',
+        'email'          => 'Email Address',
+        'phone'          => 'Phone Number (optional)',
+        'subject'        => 'Subject',
+        'message'        => 'Your Message',
+        'send'           => 'Send Message',
+        'sending'        => 'Sending...',
+        'success'        => 'Message sent successfully! I\'ll get back to you soon.',
+        'error'          => 'An error occurred. Please try again.',
+        'rate_limit'     => 'Too many submissions. Please try again later.',
+        'email_label'    => 'Email',
+        'phone_label'    => 'Phone',
+        'location_label' => 'Location',
+        'linkedin'       => 'LinkedIn',
+        'whatsapp'       => 'WhatsApp',
+    ],
+
+    'privacy' => [
+        'title'    => 'Privacy Policy',
+        'subtitle' => 'How we handle your data',
+    ],
+
+    'validation' => [
+        'required' => 'The :field field is required.',
+        'email'    => 'Please enter a valid email address.',
+        'min'      => ':field must be at least :min characters.',
+        'max'      => ':field must not exceed :max characters.',
+        'invalid'  => 'Invalid value provided.',
+    ],
+
+    'auth' => [
+        'login'          => 'Login',
+        'logout'         => 'Logout',
+        'email'          => 'Email',
+        'password'       => 'Password',
+        'remember'       => 'Remember me',
+        'login_required' => 'Please log in first.',
+        'invalid_creds'  => 'Invalid email or password.',
+        'account_locked' => 'Account locked. Try again in :min minutes.',
+    ],
+
+    'admin' => [
+        'dashboard' => 'Dashboard',
+        'projects'  => 'Projects',
+        'skills'    => 'Skills',
+        'messages'  => 'Messages',
+        'settings'  => 'Settings',
+        'seo'       => 'SEO Settings',
+        'cv'        => 'Curriculum Vitae',
+        'add'       => 'Add New',
+        'edit'      => 'Edit',
+        'delete'    => 'Delete',
+        'save'      => 'Save',
+        'cancel'    => 'Cancel',
+        'confirm_del' => 'Are you sure you want to delete?',
+        'saved'     => 'Saved successfully.',
+        'deleted'   => 'Deleted successfully.',
+        'new_message' => 'New Message',
+        'unread'    => 'Unread',
+        'status'    => 'Status',
+    ],
+
+    'common' => [
+        'read_more'  => 'Read More',
+        'back'       => 'Back',
+        'next'       => 'Next',
+        'prev'       => 'Previous',
+        'search'     => 'Search',
+        'filter'     => 'Filter',
+        'all'        => 'All',
+        'loading'    => 'Loading...',
+        'no_results' => 'No results found.',
+        'page'       => 'Page',
+        'of'         => 'of',
+        'yes'        => 'Yes',
+        'no'         => 'No',
+        'close'      => 'Close',
+        'open'       => 'Open',
+        'download'   => 'Download',
+        'share'      => 'Share',
+        'copy_link'  => 'Copy Link',
+        'copied'     => 'Copied!',
+        'error_404'  => 'Page Not Found',
+        'error_500'  => 'Server Error',
+        'go_home'    => 'Go to Homepage',
+        'lang_switch'=> 'عربي',
+    ],
+
+];
