@@ -1,0 +1,110 @@
+/* ── RESET ── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; cursor:none; }
+body {
+  background: #ffffff;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 0px 48px;
+  min-height: 100vh;
+}
+
+/* ── CURSOR ── */
+.cur-dot {
+  position: fixed;
+  left: 0; top: 0;
+  width: 7px; height: 7px;
+  background: #c8a86a;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+.cur-ring {
+  position: fixed;
+  left: 0; top: 0;
+  width: 34px; height: 34px;
+  border: 1.5px solid #1a9fe8;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: width .28s, height .28s, border-color .28s;
+}
+.cur-ring.on { width: 52px; height: 52px; border-color: #c8a86a; }
+
+/* ── SHARED CARD ── */
+.card {
+  width: 100%; max-width: 50%;
+  border: 2px solid #bbb;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(26,159,232,.25);
+  background: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ── HERO CARD ── */
+.hero-card {
+  position: relative;
+  background: #000;
+  width: 100%;
+}
+.hero-card img {
+  width: 100%; height: 280px;
+  object-fit: cover; display: block;
+}
+.hero-text {
+  position: absolute; bottom: 70px; right: 0; left: 0;
+  text-align: center;
+  font-size: 1.25rem; font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,.7);
+}
+.hero-btn {
+  position: absolute; bottom: 16px; left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 60px;
+  background: #0d0d0d; color: #c8a86a;
+  border: 1.5px solid #c8a86a; border-radius: 8px;
+  font-family: inherit; font-size: .92rem; font-weight: 700;
+  white-space: nowrap; transition: background .25s, color .25s;
+}
+.hero-btn:hover { background: #c8a86a; color: #000; }
+
+/* ── PRODUCT CARD ── */
+.prod-card img {
+  width: 100%; height: 220px;
+  object-fit: cover; display: block;
+}
+.prod-body {
+  padding: 18px 16px 20px;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 14px;
+}
+.prod-title {
+  font-size: .95rem; font-weight: 600;
+  color: #111; text-align: center;
+  line-height: 1.6;
+}
+.tags {
+  display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+}
+.tag {
+  padding: 7px 18px;
+  border: 1.5px solid #bbb; border-radius: 50px;
+  font-size: .78rem; color: #111;
+  background: transparent;
+  transition: background .22s, color .22s;
+}
+.tag:hover { background: #bbb; color: #fff; }
+.prod-btn {
+  padding: 11px 44px;
+  background: #0d0d0d; color: #c8a86a;
+  border: 1.5px solid #c8a86a; border-radius: 8px;
+  font-family: inherit; font-size: .88rem; font-weight: 700;
+  transition: background .25s, color .25s;
+}
+.prod-btn:hover { background: #c8a86a; color: #000; }
