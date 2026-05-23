@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+body{
+  border: 2px solid #70d700;
+}
+* h1{border-bottom:2px solid #70d700;padding:3px;margin:3px;border-right:1px solid #70d700;}
+* h2{border-bottom:2px solid #70d700;padding:3px;margin:3px;border-right:1px solid #70d700;}
+* h3{border-bottom:2px solid #70d700;padding:3px;margin:3px;border-right:1px solid #70d700;}
+* h4{border-bottom:2px solid #70d700;padding:3px;margin:3px;border-right:1px solid #70d700;}
+* h5{border-bottom:2px solid #70d700;padding:3px;margin:3px;border-right:1px solid #70d700;}
+
+.topmenu {    
+position: sticky;
+ z-index: 100;
+ top: 0;
+}
+#mySidebar{
+
+ top: 70px;
+	min-width:50%;
+	max-width:50%;
+  
+  display:none;
+  z-index:2;
+	}
+
+
+

@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+.projectimg {
+
+    padding: 9px;
+    border-radius: 20%; 
+	    height: 200px;
+		overflow:hidden;
+	}
+.logo{   
+    border-radius: 37%;
+    padding: 20px;
+    position: relative;
+    top: -6px;
+	text-decoration: none;
+
+	right: -20px;
+}
