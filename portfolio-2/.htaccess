@@ -1,0 +1,127 @@
+# ============================================================
+#  WebP Converter Pro — Apache Configuration
+# ============================================================
+
+Options -Indexes -MultiViews +FollowSymLinks
+ServerSignature Off
+
+AddDefaultCharset UTF-8
+
+# PHP upload limits
+<IfModule mod_php.c>
+  php_value upload_max_filesize  20M
+  php_value post_max_size        22M
+  php_value max_file_uploads     20
+  php_value memory_limit         128M
+  php_value max_execution_time   60
+  php_flag  display_errors       Off
+</IfModule>
+<IfModule mod_php8.c>
+  php_value upload_max_filesize  20M
+  php_value post_max_size        22M
+  php_value max_file_uploads     20
+  php_value memory_limit         128M
+  php_value max_execution_time   60
+  php_flag  display_errors       Off
+</IfModule>
+
+# Remove server fingerprints
+<IfModule mod_headers.c>
+  Header always unset X-Powered-By
+  Header always unset Server
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options    "nosniff"
+  Header always set X-Frame-Options           "DENY"
+  Header always set X-XSS-Protection         "0"
+  Header always set Referrer-Policy           "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy        "camera=(), microphone=(), geolocation=(), payment=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+</IfModule>
+
+# Block sensitive files
+<FilesMatch "^(bootstrap\.php|\.env|\.gitignore|README\.md)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+
+# Block dotfiles EXCEPT .htaccess (which Apache needs to read)
+<FilesMatch "^\.(?!htaccess)">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+
+<FilesMatch "\.(bak|backup|old|tmp|sql|log|swp)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+
+# URL rewriting
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # ── PASSTHROUGH: let /api/ requests go straight to PHP ───────
+  # This MUST come first. Without this, some Apache configs redirect or
+  # rewrite API requests, causing "Failed to fetch" in the browser.
+  RewriteRule ^api/ - [L]
+
+  # Block direct access to PHP infrastructure files
+  RewriteRule ^(bootstrap\.php|config/|core/|services/|middleware/)(.*)$ - [F,L,NC]
+
+  # Block direct access to runtime dirs (also protected by their own .htaccess)
+  RewriteRule ^(logs|uploads|output)/(.*)$ - [F,L,NC]
+
+  # Block PHP execution in upload dirs
+  RewriteRule ^(uploads|output)/.*\.(php\d?|phtml|cgi|pl|py)$ - [F,L,NC]
+
+  # www → non-www (uncomment and update domain)
+  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  # RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # HTTP → HTTPS (uncomment on production)
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Clean URL routing for static pages (exclude api/ and assets/)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !^/api/
+  RewriteCond %{REQUEST_URI} !^/WebP_Converter_Pro/assets/
+  RewriteRule ^([a-z0-9\-]+)/?$ pages/$1.php [L,NC]
+</IfModule>
+
+# MIME types
+<IfModule mod_mime.c>
+  AddType image/webp           .webp
+  AddType image/avif           .avif
+  AddType image/svg+xml        .svg
+  AddType application/json     .json
+  AddType font/woff2           .woff2
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# Caching
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2|woff)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(webp|png|jpg|jpeg|svg|avif|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+# Error pages for non-API requests only
+# NOTE: We intentionally do NOT set ErrorDocument 500 here because Apache
+# would replace our JSON error responses with HTML. API errors are handled
+# entirely within PHP (see api/.htaccess).
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php

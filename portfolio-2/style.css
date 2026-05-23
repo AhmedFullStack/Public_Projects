@@ -1,0 +1,766 @@
+/* ==========================================================
+   1. المتغيرات (Variables) - لقابلية التوسع وسهولة التعديل
+   ========================================================== */
+   :root {
+    --primary-color: #0056b3; /* لون أزرق احترافي يعبر عن التكنولوجيا والثقة */
+    --secondary-color: #f8f9fa;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --bg-light: #ffffff;
+    --transition-speed: 0.3s;
+    --font-main: 'Tajawal', sans-serif;
+}
+
+/* ==========================================================
+   2. إعادة الضبط الأساسية (Reset)
+   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   3. الأزرار (Buttons)
+   ========================================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* ==========================================================
+   4. شريط التنقل (Navbar)
+   ========================================================== */
+.navbar {
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================================================
+   5. الواجهة الرئيسية (Hero Section)
+   ========================================================== */
+.hero {
+    padding: 100px 0;
+    background-color: var(--secondary-color);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* استجابة الشاشات الصغيرة (Mobile Responsive) */
+@media (max-width: 768px) {
+    .nav-content { flex-direction: column; height: auto; padding: 1rem 0; gap: 1rem;}
+    .hero-content { flex-direction: column; text-align: center; }
+    .hero-buttons { justify-content: center; }
+}
+/* ==========================================================
+   6. تنسيقات عامة للأقسام (Section Utilities)
+   ========================================================== */
+   .section-padding {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* خط تجميلي تحت العنوان */
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: -10px;
+    right: 25%;
+    border-radius: 2px;
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* ==========================================================
+   7. قسم الأعمال (Portfolio Grid & Cards)
+   ========================================================== */
+.portfolio {
+    background-color: var(--bg-light);
+}
+
+.portfolio-grid {
+    display: grid;
+    /* Grid مرن يتكيف مع حجم الشاشة تلقائياً */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border: 1px solid #eee;
+}
+
+/* تأثير الرفع (Hover Effect) لإعطاء طابع تفاعلي */
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* تكبير الصورة ببطء عند تمرير الماوس */
+.portfolio-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+}
+
+.card-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+/* تنسيق "التاجات" (Tags) الخاصة باللغات البرمجية */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-stack span {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.card-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.github-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color var(--transition-speed);
+}
+
+.github-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   8. قسم من أنا والمهارات (About & Skills)
+   ========================================================== */
+   .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* تقسيم الشاشة نصفين متساويين */
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-text-box h3, .skills-box h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    border-right: 4px solid var(--primary-color);
+    padding-right: 10px;
+}
+
+.about-text-box p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+/* تنسيق قائمة الشهادات والاعتمادات */
+.credentials-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.credentials-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+    transition: transform var(--transition-speed);
+}
+
+.credentials-list li:hover {
+    transform: translateX(-5px); /* حركة خفيفة لليمين عند التأشير (لغة عربية) */
+    border-color: var(--primary-color);
+}
+
+.cred-icon {
+    font-size: 2rem;
+    background-color: var(--secondary-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.cred-info h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.2rem;
+}
+
+.cred-info span {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* تنسيق صندوق المهارات التقنية */
+.skills-box {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.skill-category {
+    margin-bottom: 1.5rem;
+}
+
+.skill-category h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-tag {
+    background-color: #fff;
+    color: var(--text-dark);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    border: 1px solid #ddd;
+    font-weight: 500;
+    transition: all var(--transition-speed);
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+/* تمييز قسم الأمان والأدوات (لأنه ميزة تنافسية قوية لك) */
+.tag-highlight .skill-tag {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: rgba(0, 86, 179, 0.05); /* لون أزرق شفاف جداً */
+}
+
+.tag-highlight .skill-tag:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* استجابة الشاشات الصغيرة (Mobile Responsive) */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* تحويل الشبكة لعمود واحد على الموبايل */
+        gap: 2rem;
+    }
+}
+/* ==========================================================
+   9. قسم الخدمات (Services Section)
+   ========================================================== */
+/* استخدمنا لون خلفية مختلف قليلاً لفصل القسم بصرياً عن الأعمال */
+.services {
+    background-color: var(--secondary-color);
+}
+
+.services-grid {
+    display: grid;
+    /* سيتم وضع 4 بطاقات بجانب بعضها في الشاشات الكبيرة، وتتقلص تلقائياً في الموبايل */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    transition: all var(--transition-speed);
+    border-bottom: 4px solid transparent;
+}
+
+/* تأثير تفاعلي عند تمرير الماوس */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    border-bottom-color: var(--primary-color); /* ظهور خط ملون بالأسفل */
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    background-color: rgba(0, 86, 179, 0.05); /* دائرة خلفية خفيفة */
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transition: transform var(--transition-speed);
+}
+
+/* دوران خفيف للأيقونة عند الوقوف على البطاقة */
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+/* ==========================================================
+   10. قسم التواصل (Contact Section)
+   ========================================================== */
+   .contact {
+    background-color: var(--secondary-color);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* إعطاء مساحة أكبر لنموذج التواصل */
+    gap: 3rem;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.info-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.info-list li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.info-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+}
+
+.info-list a:hover {
+    text-decoration: underline;
+}
+
+.freelance-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+/* تنسيق نموذج التواصل (Form UI/UX) */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: var(--font-main); /* توحيد الخط */
+    font-size: 1rem;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+    background-color: #fafafa;
+}
+
+/* تأثير الـ Focus: هام جداً لسهولة الاستخدام (Accessibility) */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1); /* هالة زرقاء خفيفة حول الحقل */
+    background-color: #fff;
+}
+
+.w-100 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 14px;
+}
+/* ==========================================================
+   12. قسم المهارات (Skills Section)
+   ========================================================== */
+   .skills {
+    background-color: #fff; /* خلفية بيضاء لتباين مريح */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.skills-title {
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+/* تصميم شريط التقدم الأساسي */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* تصميم الجزء الممتلئ من الشريط */
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    /* إضافة حركة بسيطة تظهر عند تحميل الموقع */
+    transition: width 1.5s ease-in-out;
+}
+
+/* تمييز مهارة الأمان (ميزة تنافسية) */
+.progress-highlight {
+    background: linear-gradient(90deg, var(--primary-color), #00d2ff);
+}
+
+/* استجابة الشاشات الصغيرة للموبايل */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+/* ==========================================================
+   11. تذييل الموقع (Footer)
+   ========================================================== */
+.footer {
+    background-color: #1a1a1a; /* خلفية داكنة جداً لتباين احترافي */
+    color: #fff;
+    padding-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-logo span {
+    color: #4da3ff; /* لون أزرق فاتح ليظهر بوضوح على الخلفية الداكنة */
+}
+
+.footer-brand p {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-speed);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 18px;
+    border-radius: 30px; /* تصميم أزرار دائري (Pill Shape) */
+    font-size: 0.9rem;
+}
+
+.footer-social a:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.footer-bottom p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* استجابة الشاشات الصغيرة للموبايل */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* دمج الأعمدة فوق بعضها */
+        padding: 1.5rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-social {
+        justify-content: center;
+    }
+}
